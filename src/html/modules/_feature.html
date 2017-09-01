@@ -1,0 +1,96 @@
+{% if (feature.type == 'news') %}
+
+<div class="feature__block">
+  <div class="feature__block--image{% if feature.news == 'horizontal' %} feature__image--wrap {% endif %}">
+    {% if feature.image == true %}
+    <img src="//placehold.it/740x520" alt="placeholder">
+    {% endif %}
+  </div>
+
+  <div class="feature__block--link{% if feature.news == 'horizontal' %} feature__block--wrap {% endif %}">
+    <a href="#">Management final gives ‘A’ for real-world experience</a>
+  </div>
+</div>
+
+{% elif (feature.type == 'faculty') %}
+
+<div class="feature__block">
+  <div class="feature__block__faculty--image">
+    <img src="//placehold.it/640x640" alt="placeholder">
+    <div class="feature__block__faculty__angle--wrap">
+      <div class="feature__block__faculty--angle"></div>
+    </div>
+    <div class="feature__block__faculty--content">
+      <div class="feature__block__faculty__content--text">
+        <p>
+          "Successfully dealing with the complexities of business requires a deep understanding of both economics and financial markets."
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="feature__block__faculty--link">
+    <a href="#">Molly Ross</a>
+  </div>
+  <div class="feature__block__faculty--title">
+    Professor, Economics
+  </div>
+
+  <div class="feature__block__faculty--text">
+    Dr. Russ is an expert in pricing, retail and brand names and how they affect perceived quality.
+  </div>
+</div>
+
+{% elif (feature.type == 'student') %}
+
+<div class="feature feature--spacing">
+  <img src="//placehold.it/756x504" alt="placeholder">
+
+  <div class="feature__block__student--name">
+    Kenda Sancet
+  </div>
+
+  <p class="feature__block__student--text">Kendra Sancet has been named the Lone Star Conference Softball Academic Player of the Year for her excellence on the field and in the classroom. Sancet, a mathematics major with a 3.939 GPA, started all 48 games this season for TWU and leads the LSC in doubles with 20.</p>
+
+</div>
+
+{% elif (feature.type == 'academics') %}
+<div class="feature">
+  <div class="feature__media">
+    <a href="#"><img class="feature__media__image" src="//placehold.it/756x504" alt="placeholder">
+    </a>
+  </div>
+
+  <div class="feature__block__student--name">
+    <a href="#">College of Arts &amp; Sciences</a>
+  </div>
+  <p class="feature__block__student--text">Home to occupational therapy, physical therapy, dental hygiene, kinesiology, health care administration, and one of the nation’s top-ranked nutrition and food science programs.</p>
+
+</div>
+
+
+{% elif (feature.type == 'residence') %}
+<div class="feature">
+  <div class="feature__media">
+    <a href="#"><img class="feature__media__image" src="//placehold.it/756x504" alt="placeholder">
+    </a>
+  </div>
+
+  <div class="feature__block__residence--name">
+    <a href="#">Guinn Hall</a>
+  </div>
+</div>
+
+{% else %}
+<div class="feature__event">
+  <div class="feature__event--date">
+    April 5
+  </div>
+  <div class="feature__event--link">
+    <a href="#">Online Degrees Info Sessions</a>
+  </div>
+
+</div>
+
+{% endif %}

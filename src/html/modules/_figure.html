@@ -1,0 +1,60 @@
+
+<div class="row figure">
+  <div class="col-sm-4 middle__center">
+    <div class="figure__count__number--wrap">
+      <div class="figure__count--number"><span class="countup">14</span>/1</div>
+      <div class="figure__count--text">Student-faculty ratio</div>
+    </div>
+  </div>
+  <div class="col-sm-4 middle__center">
+    <div class="figure__donut" data-calc-donut=".90">
+      <svg version="1.1" class="svgdonut">
+
+      <defs>
+
+      </defs>
+
+      <g transform="translate(130, 130)">
+              <linearGradient id="quotaDonut__gradient">
+          <stop stop-color="#fc0023" offset="0%"></stop>
+          <stop stop-color="#f50" offset="100%"></stop>
+        </linearGradient>
+        <circle r="120" class="circle-back" />
+        <circle r="120" class="circle-front" transform="rotate(270.1)" />
+      </g>
+    </svg>
+  <div class="figure__count__number--wrap-circle">
+    <div class="figure__count--number"><span class="countup">90</span>%</div>
+    <div class="figure__count--text">of classes have fewer than 50 students</div>
+  </div>
+  </div>
+
+
+</div>
+{% if (figure.type == 'academics') %}
+<div class="col-sm-4 middle__center">
+  <div class="figure__count__number--wrap">
+    <div class="figure__count--number">
+      <span class="countup">121</span>
+    </div>
+    <div class="figure__count--text">
+      Undergraduate majors
+    </div>
+  </div>
+
+</div>
+{% else %}
+<div class="col-sm-4 middle__center">
+  <div class="figure__count__number--wrap">
+    <div class="figure__count--number">
+      $<span class="countup">28000</span>
+    </div>
+    <div class="figure__count--text">
+      Average Cost Per Year
+    </div>
+  </div>
+
+</div>
+{% endif %}
+</div>
+

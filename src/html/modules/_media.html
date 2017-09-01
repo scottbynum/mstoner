@@ -1,0 +1,74 @@
+<div class="media">
+  {% if (media.type == 'video') %}
+
+  <div class="media__video">
+    <a href="https://www.youtube.com/watch?v=vZ67DVChkJg" class="popup-video">
+      <img src="//placehold.it/960x640" alt="placeholder">
+      <span class="media__video--icon">{{ svgstore('play') }}</span>
+    </a>
+  </div>
+  <div class="media__caption">
+    <div class="wrap">
+      <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.
+      </p>
+    </div>
+  </div>
+
+  {% elif (media.type == 'ajax') %}
+  <div class="media__video">
+    <a href="#inline-modal" class="popup-modal">
+      <img src="//placehold.it/960x640" alt="placeholder">
+      <span class="media__video--icon">{{ svgstore('play') }}</span>
+    </a>
+  </div>
+  <div class="media__caption">
+    <div class="wrap">
+      <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.
+      </p>
+    </div>
+  </div>
+
+  <div class="mfp-hide" id="inline-modal">
+    <div class="media__inline">
+          <button title="Close (Esc)" type="button" class="mfp-close">{{ svgstore('close')}}</button>
+      <iframe width="760" height="400" src="https://www.youtube.com/embed/vZ67DVChkJg" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+  </div>
+
+  {% else %}
+  <div class="media__slider">
+    <div class="media__slider__item">
+      <img src="//placehold.it/960x640" alt="placeholder">
+      <div class="media__caption">
+        <div class="wrap">
+          <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="media__slider__item">
+      <img src="//placehold.it/960x640" alt="placeholder">
+      <div class="media__caption">
+        <div class="wrap">
+          <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="media__slider__item">
+      <img src="//placehold.it/960x640" alt="placeholder">
+      <div class="media__caption">
+        <div class="wrap">
+          <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  {% endif %}
+</div>

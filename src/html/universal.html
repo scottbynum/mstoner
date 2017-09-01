@@ -1,0 +1,307 @@
+---
+title: Universal
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+<div class="wrap">
+  <aside class="sidebar">
+    {% include "modules/_subnav.html" %}
+  </aside>
+
+  <main class="main" id="main-content">
+    {% include "modules/_breadcrumbs.html" %}
+
+    <section class="section">
+      <h1>This is a Page Title (h1)</h1>
+      <p class="p--large">This is an introductory paragraph that uses a typographic style that allows a writer to make a bold statement or highlight a primary idea or theme. This paragraph is set in larger, sans serif type to distinguish it from the running copy.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>This is a Subhead (h2)</h2>
+      <p>This, of course, is not the real copy for this site. The real words will be written once we arrive at the content creation phase. Rest assured, the words will expand the concept. With clarity. Conviction. And even a little wit.
+      </p>
+      <div class="align-right">
+        <img src="//placehold.it/800x640" alt="placeholder">
+      </div>
+      <p>
+        Because in today’s competitive environment, the body copy of every page must lead the reader through a series of disarmingly simple thoughts. All your supporting arguments must be communicated with simplicity and charm. And in such a way that the reader will read on. (After all, that’s a reader’s job: to read, isn’t it?)
+      </p>
+
+
+      <p>
+        And by the time your readers have reached this point in the finished copy, you will have convinced them that you not only respect their intelligence, but you also understand their needs as prospects. As a result of which, your site will repay your efforts. There’s every chance your competitors will wish they’d written this content, not you. While your customers will have probably forgotten that your competitors even exist.
+      </p>
+
+      {% set media = {type: 'ajax'} %}
+      {% include "modules/_media.html" %}
+
+      <p>
+        Fact is, too much long body copy is dotted with such indulgent little phrases like truth is, fact is, and who’s to blame you. Trust us: we guarantee, with a hand over our heart, that no such indulgent rubbish will appear in your content. That’s why we have big blue pencils. So we can expunge every expedient example of low-witted waffle. For you, the skies will be blue, the birds will sing, and your copy will be crafted by a dedicated individual dreaming of your brand every single night.
+      </p>
+
+      <blockquote>
+        <p>
+          "This is a pull quote that would allow for the featuring of an excerpt from the page copy.”
+          <cite>Author Name</cite>
+        </p>
+
+      </blockquote>
+
+      <p>
+        And so, while your dedicated reader, enslaved to each mellifluous paragraph, clutches his mouse with increasing interest, you can count all your increased profits and take pots of money to your bank. Sadly, this is not the real copy for this page. But it could well be.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>This is a Subhead (h3)</h3>
+      <p>Nulla aliquam venenatis arcu, non congue ligula. Donec cursus nisl urna, vitae porttitor massa imperdiet eu.
+      </p>
+
+      {% include "modules/_table.html" %}
+
+      <p>
+        Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum.
+      </p>
+
+      <p>
+        Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor sollicitudin fermentum. Donec congue lorem a molestie bibendum. Etiam nisi ante, consectetur eget placerat a, tempus a neque. Donec ut elit urna. Etiam venenatis eleifend urna eget scelerisque. Aliquam in nunc quis dui sollicitudin ornare ac vitae lectus.
+      </p>
+    </section>
+
+    <section class="section">
+      <h4>This is a Suhead (h4)</h4>
+      <p>
+        Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+      </p>
+
+      {% include "modules/_figure.html" %}
+
+      <p>
+        Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas. Nullam rhoncus lacus non odio luctus, eu condimentum mauris ultrices.
+      </p>
+    </section>
+
+    <section class="section">
+      <h5>This is a Subhead (h5)</h5>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <ul>
+            <li>Nam dapibus nisl vitae elit fringilla rutrum.</li>
+            <li>Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa.</li>
+            <li>Vestibulum sed metus in lorem tristique ullamcorper id vitae erat.</li>
+
+          </ul>
+        </div>
+
+        <div class="col-sm-6">
+          <ol>
+            <li>Donec facilisis tortor ut augue lacinia, at viverra est semper.</li>
+            <li>Sed sapien metus, scelerisque nec pharetra id, tempor a tortor.</li>
+            <li>Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut..</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h6>This is a Subhead (h6)</h6>
+      <p>
+        Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas. Nullam rhoncus lacus non odio luctus, eu condimentum mauris ultrices.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Dynamic Learning Opportunities</h3>
+
+
+        <div class="feature__large">
+          <div class="feature__large--image">
+            <img src="//placehold.it/960x640" alt="placeholder">
+            <div class="feature__large--title">
+              <a href="#">Cooperative Education (Co-op)</a>
+            </div>
+          </div>
+
+          <div class="feature__large--content">
+            <p>Co-op allows you to connect academic knowledge with the business and professional world. Co-op expands your education outside the classroom to paid employment in a work setting.
+            </p>
+            <h5>Benefits of Co-op:</h5>
+            <ul>
+              <li>Apply classroom theory to actual work situations.</li>
+              <li>Test your interests and develop long-range career plans and career goals.</li>
+              <li>Enhance your marketability with on-the-job training.</li>
+              <li>Strengthen your problem-solving skills, self-confidence, self-discipline, and sense of responsibility.</li>
+              <li>Develop management skills through interactions in career settings.</li>
+            </ul>
+            <a href="#" class="btn btn-default btn--full-width">Find an Internship</a>
+          </div>
+
+      </div>
+    </section>
+
+    <div class="section">
+      <div class="h6">Image Gallery</div>
+      <div class="row">
+        <div class="col-sm-4">
+         <div class="feature__block">
+          <div class="feature__block--image popup-gallery">
+            <a href="//placehold.it/740x520">
+              <img src="//placehold.it/740x520" alt="placeholder" title="placeholder">
+            </a>
+            <div class="popup-gallery-items">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder1" title="placeholder1">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder2" title="placeholder2">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder3" title="placeholder3">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder4" title="placeholder4">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder5" title="placeholder5">
+            </div>
+
+          </div>
+
+          <div class="feature__block--link">
+            <a href="#">Management final gives ‘A’ for real-world experience</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="feature__block">
+          <div class="feature__block--image popup-gallery">
+            <a href="//placehold.it/740x520"><img src="//placehold.it/740x520" alt="placeholder" title="placeholder"></a>
+            <div class="popup-gallery-items">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder1" title="placeholder1">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder2" title="placeholder2">
+            </div>
+          </div>
+
+          <div class="feature__block--link">
+            <a href="#">Management final gives ‘A’ for real-world experience</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="feature__block">
+          <div class="feature__block--image popup-gallery">
+            <a href="//placehold.it/740x520"><img src="//placehold.it/740x520" alt="placeholder" title="placeholder"></a>
+            <div class="popup-gallery-items">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder1" title="placeholder1">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder2" title="placeholder2">
+            </div>
+          </div>
+
+          <div class="feature__block--link">
+            <a href="#">Management final gives ‘A’ for real-world experience</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="feature__block">
+          <div class="feature__block--image popup-gallery">
+            <a href="//placehold.it/740x520"><img src="//placehold.it/740x520" alt="placeholder" title="placeholder"></a>
+            <div class="popup-gallery-items">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder1" title="placeholder1">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder2" title="placeholder2">
+            </div>
+          </div>
+
+          <div class="feature__block--link">
+            <a href="#">Management final gives ‘A’ for real-world experience</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="feature__block">
+          <div class="feature__block--image popup-gallery">
+            <a href="//placehold.it/740x520"><img src="//placehold.it/740x520" alt="placeholder" title="placeholder"></a>
+            <div class="popup-gallery-items">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder1" title="placeholder1">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder2" title="placeholder2">
+            </div>
+          </div>
+
+          <div class="feature__block--link">
+            <a href="#">Management final gives ‘A’ for real-world experience</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="feature__block">
+          <div class="feature__block--image popup-gallery">
+            <a href="//placehold.it/740x520"><img src="//placehold.it/740x520" alt="placeholder" title="placeholder"></a>
+            <div class="popup-gallery-items">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder1" title="placeholder1">
+              <img class="hidden" src="//placehold.it/740x520" alt="placeholder2" title="placeholder2">
+            </div>
+          </div>
+
+          <div class="feature__block--link">
+            <a href="#">Management final gives ‘A’ for real-world experience</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% set media = {type: none} %}
+    {% include "modules/_media.html" %}
+  </div>
+
+
+
+  <div class="h1">Heading h1</div>
+  <h2>Heading h2</h2>
+  <h3>Heading h3</h3>
+  <h4>Heading h4</h4>
+  <h5>Heading h5</h5>
+  <h6>Heading h6</h6>
+
+
+  <div class="section">
+    {% include "modules/_tabs.html" %}
+
+    {% include "modules/_pagination.html" %}
+  </div>
+
+  <p class="p--large">
+    Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consecte.
+  </p>
+
+  <p>
+    Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consecte.
+  </p>
+
+  <p class="p--small">
+    Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consecte.
+  </p>
+
+  <a href="#">Link style</a><br><br>
+  <a href="#" class="btn btn-default">Button Style</a>
+
+  <div class="section">
+    <div class="color__box maroon"></div>
+    <div class="color__box white"></div>
+    <div class="color__box red"></div>
+    <div class="color__box blue"></div>
+    <div class="color__box yellow"></div>
+    <div class="color__box orange"></div>
+    <div class="color__box gray-lighter"></div>
+    <div class="color__box gray-light"></div>
+    <div class="color__box gray"></div>
+    <div class="color__box black"></div>
+    <div class="color__box red-gradient"></div>
+    <div class="color__box orange-gradient"></div>
+    <div class="color__box blue-gradient"></div>
+  </div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}

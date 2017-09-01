@@ -1,0 +1,191 @@
+---
+title: Primary Landing Page (Academics)
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+{% set hero = {type: 'academic'} %}
+{% include "modules/_hero.html" %}
+
+<div class="section--gray-lighter" id="main-content">
+  <div class="block">
+
+    <div class="skew" style="background-image: url('img/flowers.png');">
+      <div class="wrap wrap--wide">
+        <div class="row block__content--academic">
+          <div class="col-md-5">
+            <div class="h1">Academics</div>
+            <div class="block__content__placeholder"></div>
+
+          </div>
+          <div class="col-md-push-1 col-lg-push-0 col-md-6 block__text--position">
+            <p class="block__text"><a class="block__link--white" href="#">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Fusce ac ex scelerisque, commodo orci in, porttitor nisl. Quisque tristique massa at ex gravida congue. Duis tristique diam neque. Aenean sed nibh ac augue lacinia pulvinar. </p>
+            <p class="block__text">Mauris nibh tellus, fermentum sed efficitur a, luctus non augue. Proin justo diam, facilisis quis maximus a, bibendum ut tortor. Vestibulum dictum nulla vel odio pretium viverra.</p>
+          </div>
+        </div>
+      </div>
+      <div class="skew-after skew-after--gray-lighter"></div>
+
+    </div>
+    <div class="wrap wrap--wide">
+      <div class="block__content__img">
+        <img src="//placehold.it/410x410" alt="placeholder">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="wrap wrap--wide">
+      <h3 class="text-center">Explore Our Academics</h3>
+      <ul class="explore__navigation">
+        <li class="explore__navigation--item"><a class="explore__navigation--link" href="#">Undergraduate Majors &amp; Minors</a></li>
+        <li class="explore__navigation--item"><a class="explore__navigation--link" href="#">Graduate Programs</a></li>
+        <li class="explore__navigation--item"><a class="explore__navigation--link" href="#">Colleges &amp; Schools</a></li>
+        <li class="explore__navigation--item"><a class="explore__navigation--link" href="#">Research</a></li>
+      </ul>
+      <ul class="explore__navigation">
+        <li class="explore__navigation--item"><a class="explore__navigation--link" href="#">Library</a></li>
+        <li class="explore__navigation--item"><a class="explore__navigation--link" href="#">Page Specific Navigation A</a></li>
+        <li class="explore__navigation--item"><a class="explore__navigation--link" href="#">Pages Specific Navigation B</a></li>
+        <li class="explore__navigation--item explore__navigation--item-blank"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="section section--tall">
+    <div class="text-center">
+      <h2>Five Amazing Colleges</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        {% set feature = {type: 'academics'} %}
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-4">
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-4">
+        {% include "modules/_feature.html" %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-4">
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="section">
+
+  <div class="block">
+
+    <div class="slider__skew skew" style="background-image: url('img/angle-img.png');">
+
+      <div class="slider">
+        {% include "modules/_slider.html" %}
+        {% include "modules/_slider.html" %}
+      </div>
+
+      <div class="skew-before"></div>
+      <div class="skew-after"></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="section section--tall">
+    <div class="text-center">
+      <h2>By the Numbers</h2>
+    </div>
+    {% set figure = {type: 'academics' } %}
+    {% include "modules/_figure.html" %}
+    <div class="text-center">
+      <a href="#" class="btn btn-default">Learn More About TWU</a>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="section">
+    <div class="wrap text-center">
+      <h2>Faculty Who Help You Succeed</h2>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="row">
+      {% include "modules/_gallery.html" %}
+      {% include "modules/_gallery.html" %}
+      {% include "modules/_gallery.html" %}
+      {% include "modules/_gallery.html" %}
+    </div>
+    <div class="row">
+      {% include "modules/_gallery.html" %}
+      {% include "modules/_gallery.html" %}
+      {% include "modules/_gallery.html" %}
+      {% include "modules/_gallery.html" %}
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="section section--tall">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="//placehold.it/600x400" alt="placeholder">
+      </div>
+      <div class="col-sm-offset-1 col-sm-5">
+        <div class="h4">Whirly Girls</div>
+        <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at co.</p>
+        <div class="full-width">
+          <a href="#" class="btn btn-default">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrap wrap--wide">
+  <div class="section section--tall">
+    <div class="text-center">
+      <div class="h3">Featured News</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        {% set feature = {type: 'news', image: true } %}
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-3">
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-3">
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-3">
+        {% include "modules/_feature.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% set footer = {type: 'pre-footer', alt: true} %}
+{% include "modules/_footer.html" %}
+{% set footer = {type: 'none'} %}
+
+
+{% endblock %}

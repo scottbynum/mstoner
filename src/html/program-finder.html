@@ -1,0 +1,277 @@
+---
+title: Academic Program Finder
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+<div class="wrap">
+  <div class="heading">
+    {% include "modules/_breadcrumbs.html" %}
+    <h1 class="">Academic Programs</h1>
+  </div>
+  <aside class="sidebar">
+
+    <section class="filter__sidebar" id="programs">
+      <h2 class="h6">Filter By</h2>
+
+      <div class="filter__button__group">
+        <button class="btn btn-default filter__button" data-filter-program="undergrad">Undergraduate Degrees</button>
+        <button class="btn btn-default filter__button" data-filter-program="master">Master's Degrees</button>
+        <button class="btn btn-default filter__button" data-filter-program="doctoral">Ph.D. and Doctoral Degrees</button>
+        <button class="btn btn-default filter__button" data-filter-program="certificate">Certificate Programs</button>
+      </div>
+
+      <div class="filter__search">
+
+        <label for="filter__search" class="hide">Filter Programs Search</label>
+        <input class="filter__search__input" id="filter__search" type="text" placeholder="Search" />
+
+        <button class="filter__input__search--btn" type="button">
+          <span class="hide">Go</span><span class="filter__input__search--icon">{{ svgstore('search') }}</span>
+        </button>
+      </div>
+
+      <div class="filter__dropdown">
+        <a href="#" class="filter__dropdown__link">Areas of Study <span class="filter__dropdown__link--toggle">{{ svgstore('arrow') }}</span></a>
+        <ul class="filter__list" role="menu">
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-areaofstudy="administration">
+            Administration
+          </li>
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-areaofstudy="art">
+            Art
+          </li>
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-areaofstudy="biochemistry">
+            Biochemistry
+          </li>
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-areaofstudy="business_administration">
+            Business Administration
+          </li>
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-areaofstudy="chemistry">
+            Chemistry
+          </li>
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-areaofstudy="child_development">
+            Child Development
+          </li>
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0"  data-filter-areaofstudy="communication_sciences">
+            Communication Sciences
+          </li>
+          <li class="filter__list__item checkbox filter__areaofstudy" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-areaofstudy="computer_science">
+            Computer Science
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter__dropdown">
+        <a href="#" class="filter__dropdown__link">Colleges <span class="filter__dropdown__link--toggle">{{ svgstore('arrow')}}</span></a>
+        <ul class="filter__list" role="menu">
+          <li class="filter__list__item checkbox filter__college" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-college="arts_sciences">
+            College of Arts &amp; Sciences
+          </li>
+          <li class="filter__list__item checkbox filter__college" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-college="health_sciences">
+            College of Health Sciences
+          </li>
+          <li class="filter__list__item checkbox filter__college" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-college="professional_education">
+            College of Professional Education
+          </li>
+          <li class="filter__list__item checkbox filter__college" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-college="nursing">
+            College of Nursing
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter__dropdown">
+        <a href="#" class="filter__dropdown__link">Locations <span class="filter__dropdown__link--toggle">{{ svgstore('arrow') }}</span></a>
+        <ul class="filter__list" role="menu">
+          <li class="filter__list__item checkbox filter__location" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-location="denton">
+            Denton
+          </li>
+          <li class="filter__list__item checkbox filter__location" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-location="dallas">
+            Dallas
+          </li>
+          <li class="filter__list__item checkbox filter__location" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-location="houston">
+            Houston
+          </li>
+          <li class="filter__list__item checkbox filter__location" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-location="ft_worth">
+            Ft. Worth
+          </li>
+          <li class="filter__list__item checkbox filter__location" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-location="plano">
+            Plano
+          </li>
+          <li class="filter__list__item checkbox filter__location" role="menuitemcheckbox" aria-checked="false" tabindex="0" data-filter-location="online">
+            Online
+          </li>
+        </ul>
+      </div>
+    </section>
+  </aside>
+
+  <main class="main filter__main" id="main-content">
+    <div class="clear__filter--wrap">
+      <button class="clear__filter">Clear Filtering<span class="clear__filter--icon">{{ svgstore('close') }}</span></button>
+    </div>
+    <div class="search__results__title"></div>
+
+    <ul class="filter__list__result">
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="undergrad" data-filter-areaofstudy="biology administration" data-filter-college="arts_sciences health_sciences">B.S. in Biology</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="denton">Denton</span>
+          </div>
+          <span class="filter__list__result__detail--link">
+            <a href="#">Program Faculty</a>
+          </span>
+        </div>
+      </li>
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="undergrad" data-filter-areaofstudy="medical" data-filter-college="health_sciences">B.S. in Medical Technology</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="dallas">Dallas</span>
+          </div>
+          <span class="filter__list__result__detail--link">
+            <a href="#">Program Faculty</a>
+          </span>
+        </div>
+      </li>
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="undergrad certificate" data-filter-areaofstudy="biology" data-filter-college="arts_sciences">B.S. in Biology with Teacher Certification</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="houston">Houston</span>
+          </div>
+          <div class="filter__list__result__location--link">
+            <span data-filter-location="online">Online</span>
+          </div>
+          <span class="filter__list__result__detail--link">
+            <a href="#">Program Faculty</a>
+          </span>
+        </div>
+      </li>
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="undergrad" data-filter-areaofstudy="biology" data-filter-college="arts_sciences">Undergraduate Minor in Biology</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="ft_worth">Ft. Worth</span>
+          </div>
+          <span class="filter__list__result__detail--link">
+            <a href="#">Program Faculty</a>
+          </span>
+        </div>
+      </li>
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="master" data-filter-areaofstudy="biology" data-filter-college="arts_sciences">M.S. in Biology</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="online">Online</span>
+          </div>
+        </div>
+      </li>
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="doctoral" data-filter-areaofstudy="biology" data-filter-college="arts_sciences">Ph.D. in Molecular Biology</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="plano">Plano</span>
+          </div>
+          <span class="filter__list__result__detail--link">
+            <a href="#">Program Faculty</a>
+          </span>
+        </div>
+      </li>
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="undergrad" data-filter-areaofstudy="biochemistry" data-filter-college="arts_sciences">B.S. in Biochemistry</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="dallas">Dallas</span>
+          </div>
+          <div class="filter__list__result__location--link">
+            <span data-filter-location="online">Online</span>
+          </div>
+        </div>
+      </li>
+      <li class="filter__list__result__item">
+        <div class="filter__list__result--link">
+          <a href="#" data-filter-program="certificate" data-filter-areaofstudy="biochemistry" data-filter-college="arts_sciences">Certificate in Biochemistry</a>
+        </div>
+        <div class="filter__list__result--p">
+          <p>
+            Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur at vestibulum nisi.
+          </p>
+        </div>
+        <div class="filter__list__result--detail">
+          <div class="filter__list__result__location--link">
+            <strong>Available: </strong>
+            <span data-filter-location="plano">Plano</span>
+          </div>
+          <div class="filter__list__result__location--link">
+            <span data-filter-location="denton">Denton</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+
+  </main>
+</div>
+
+{% endblock %}

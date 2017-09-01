@@ -1,0 +1,189 @@
+---
+title: Giving Page
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+{% set hero = {type: 'giving'} %}
+{% include "modules/_hero.html" %}
+
+<div class="wrap">
+
+  <div class="hero__giving__tabs__wrap" id="main-content">
+    <div class="tabs">
+      <ul class="nav nav-tabs hero__tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#annual" class="tab-link" aria-controls="annual" role="tab" data-toggle="tab">Annual Funds</a></li>
+        <li role="presentation"><a href="#recurring" class="tab-link" aria-controls="recurring" role="tab" data-toggle="tab">Recurring Gifts</a></li>
+        <li role="presentation"><a href="#planned" class="tab-link" aria-controls="planned" role="tab" data-toggle="tab">Planned Gifts</a></li>
+        <li role="presentation"><a href="#endowed" class="tab-link" aria-controls="endowed" role="tab" data-toggle="tab">Endowed Gifts</a></li>
+        <li role="presentation"><a href="#corporate" class="tab-link" aria-controls="corporate" role="tab" data-toggle="tab">Corporate Gifts</a></li>
+        <li role="presentation"><a href="#stock" class="tab-link" aria-controls="stock" role="tab" data-toggle="tab">Gifts of Stock</a></li>
+      </ul>
+
+      <div class="tab-content hero__giving__tab__container">
+        <div role="tabpanel" class="tab-pane active" id="annual">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="//placehold.it/670x447" alt="placeholder">
+            </div>
+            <div class="col-sm-8">
+
+              <p>Through an endowment, your gift is invested and pays out a yearly distribution, which goes to support an area of your preference. Many times, endowed gifts go to support the most important assets of the university, our students and faculty, by providing scholarship, fellowship and professorship support. A minimum amount is required to establish an endowment. However, an endowment can be built up with smaller gifts over a period of time.</p>
+              <a href="#" class="btn btn-default">Plan Your Gift</a>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="recurring">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="//placehold.it/670x447" alt="placeholder">
+            </div>
+            <div class="col-sm-8">
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien augue, ullamcorper et neque id, vulputate fringilla arcu. Pellentesque laoreet vitae velit at ultricies. Vivamus vitae risus elementum, tristique ipsum non, dignissim dolor. Sed pretium elit a turpis pellentesque, sit amet egestas velit efficitur. Ut ac ultrices elit. In hac habitasse platea dictumst. Suspendisse potenti.</p>
+              <a href="#" class="btn btn-default">Plan Your Gift</a>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="planned">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="//placehold.it/670x447" alt="placeholder">
+            </div>
+            <div class="col-sm-8">
+
+              <p>Pellentesque fringilla volutpat est, in ullamcorper lectus tristique a. Proin sed metus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis porttitor mauris ac mattis commodo. Nunc nunc tortor, consectetur in sollicitudin ac, tempor ut dui. Ut a ultrices sem. Etiam quis rhoncus sapien. Aenean hendrerit accumsan ipsum non vulputate. Nullam ut orci vitae ex varius ultrices.</p>
+              <a href="#" class="btn btn-default">Plan Your Gift</a>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="endowed">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="//placehold.it/670x447" alt="placeholder">
+            </div>
+            <div class="col-sm-8">
+
+              <p>Suspendisse justo nunc, viverra vitae turpis euismod, facilisis semper sapien. Vestibulum non tellus ac magna tincidunt bibendum. Cras mattis at dolor non placerat. Nam ut ipsum massa. Praesent ac lectus bibendum, feugiat neque ac, molestie orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer quis ultricies enim, in porta ipsum. Vestibulum et dui a orci tristique dapibus gravida non tortor. Donec vestibulum dictum nisl a euismod. Nulla facilisi.</p>
+              <a href="#" class="btn btn-default">Plan Your Gift</a>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="corporate">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="//placehold.it/670x447" alt="placeholder">
+            </div>
+            <div class="col-sm-8">
+
+              <p>Praesent molestie urna purus, sed ullamcorper dolor fermentum a. Curabitur et lacinia dui. Nunc sit amet nisl a erat malesuada porta. Etiam consequat, nisl in efficitur eleifend, dui mi condimentum diam, ac viverra risus risus sed leo.</p>
+              <a href="#" class="btn btn-default">Plan Your Gift</a>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="stock">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="//placehold.it/670x447" alt="placeholder">
+            </div>
+            <div class="col-sm-8">
+
+              <p>Cras suscipit ac lacus at cursus. Etiam mi mauris, dignissim accumsan sem ut, tincidunt euismod orci. Pellentesque ut maximus dui, vitae malesuada purus. Fusce sem tortor, euismod in consequat in, cursus at tellus. In quis pretium nisi, vulputate molestie nisl. Vivamus consequat dolor a scelerisque luctus.</p>
+              <a href="#" class="btn btn-default">Plan Your Gift</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="block">
+
+  <div class="skew" style="background-image: url('img/angle-img.png');">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="block__content block__content--alt">
+          <div class="h2 text-center">Alumni Relations</div>
+          <p>We are a connecting point for over 80,000 living graduates of Texas Woman’s University. We cultivate pride, loyalty, and commitment in our alumni and provide meaningful ways to involve alumni with each other and in the life of the University and educate and encourage future alumni in support of their university.</p>
+
+          <div class="block__button__center">
+            <a href="#" class="btn btn-default btn-light">Update Your Contact Information</a>
+            <a href="#" class="btn btn-default btn-light">Learn More About Alumni Relations</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="skew-before"></div>
+    <div class="skew-after"></div>
+
+  </div>
+
+</div>
+
+
+<div class="wrap">
+  <div class="section section--tall-bottom">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="text-center">
+          <h2>Our Priorities</h2>
+        </div>
+
+        <h3>Your gifts support TWU, its people, and its programs.</h3>
+        <p>TWU is a state-assisted (rather than a state-supported) institution. The primary way in which we accomplish this mission is by garnering non-government financial support from a variety of areas.</p>
+
+        <p>Gift support from alumni, faculty, staff, corporations, foundations, friends and supporters of TWU provide critically needed funding to literally every area of the university. The trained staff at the Office of University Advancement not only solicits these charitable donations, but also performs the gift receipting for income tax purposes and stewardship duties for donor needs.</p>
+        <div class="text-center full-width">
+          <a href="#" class="btn btn-default">Learn More About Our Priorities</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+
+  <div class="block">
+
+    <div class="slider__skew skew" style="background-image: url('img/angle-img.png');">
+
+      <div class="slider">
+        {% include "modules/_slider.html" %}
+        {% include "modules/_slider.html" %}
+      </div>
+
+      <div class="skew-before"></div>
+      <div class="skew-after"></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="section section--tall">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="//placehold.it/600x400" alt="placeholder">
+      </div>
+      <div class="col-sm-offset-1 col-sm-5">
+        <div class="h4">Featured Giving Project</div>
+        <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at co.</p>
+        <div class="full-width">
+          <a href="#" class="btn btn-default">Support this Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

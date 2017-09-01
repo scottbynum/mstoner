@@ -1,0 +1,29 @@
+{% include "modules/_topbar.html" %}
+
+<header class="header">
+  <div class="header__small">
+
+    <button class="btn header__small__menu--toggle">
+    <span class="hide">Menu</span>
+      <span class="header__small__menu-toggle--open">{{ svgstore('menu') }}</span>
+      <span class="header__small__menu-toggle--close">{{ svgstore('close') }}</span>
+    </button>
+
+    <button class="btn header__small__search--toggle">
+    <span class="hide">Search</span>
+      <span class="header__small__search-toggle--open">{{ svgstore('search') }}</span>
+      <span class="header__small__search-toggle--close">{{ svgstore('close') }}</span>
+    </button>
+  </div>
+  <div class="wrap wrap--wide">
+    <a href="#" class="header__logo">
+      <span class="hide">Texas Woman's University</span>{{ svgstore('twu_logo') }}
+    </a>
+  </div>
+  {% include "modules/_nav.html" %}
+  {% include "modules/_search.html" %}
+
+
+
+</header>
+

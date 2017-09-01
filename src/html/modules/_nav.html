@@ -1,0 +1,145 @@
+{% if nav.type =='subnav'  %}
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subnav-bar" aria-expanded="false">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="navbar-toggle--icon">{{ svgstore('arrow') }}</span>
+      </button>
+      <span class="navbar-brand">Topics</span>
+    </div>
+    <div class="collapse navbar-collapse" id="subnav-bar">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="navbar-nav__link" href="#">Arts</a>
+        </li>
+        <li class="active">
+          <a class="navbar-nav__link" href="#">Business</a>
+        </li>
+        <li>
+          <a class="navbar-nav__link" href="#">Campus Life</a>
+        </li>
+        <li>
+          <a class="navbar-nav__link" href="#">Global</a>
+        </li>
+        <li>
+          <a class="navbar-nav__link" href="#">Health &amp; Wellness</a>
+        </li>
+        <li>
+          <a class="navbar-nav__link" href="#">Science &amp; Tech</a>
+        </li>
+        <li>
+          <a class="navbar-nav__link" href="#">Sports</a>
+        </li>
+
+        <li class="navbar-nav__divider"></li>
+        <li>
+          <a class="navbar-nav__link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% else %}
+
+<nav class="nav__wrap">
+  <div class="wrap wrap--wide">
+    <ul class="nav__list">
+      <li><a href="#" class="nav__link">Academics</a>
+        <div class="subnav__list">
+          <div class="subnav__list--wrap">
+            <ul>
+              <li><a href="#" class="subnav__link">Undergraduate Majors &amp; Minors</a></li>
+              <li><a href="#" class="subnav__link">Graduate Programs</a></li>
+              <li><a href="#" class="subnav__link">Colleges &amp; Schools</a></li>
+              <li><a href="#" class="subnav__link">Research</a></li>
+              <li class="program__form__item">
+                <form class="program__search__form" method="GET" action="program-finder.html">
+                  <label for="program-search-input" class="hide">Search</label>
+                  <input class="search__input" type="search" placeholder="Search for a program" id="program-search-input" name="search">
+                  <button class="program__search__button" type="submit"><span class="hide">Search</span>{{ svgstore('search') }}</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="#" class="nav__link">Admission &amp; Aid</a>
+        <div class="subnav__list">
+          <div class="subnav__list--wrap">
+            <ul>
+              <li><a href="#" class="subnav__link">Application Process</a></li>
+              <li><a href="#" class="subnav__link">Meet the Admissions Team</a></li>
+              <li><a href="#" class="subnav__link">Financial Aid</a></li>
+              <li><a href="#" class="subnav__link">Cost of Attendance</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="#" class="nav__link">Student Life</a>
+        <div class="subnav__list">
+          <div class="subnav__list--wrap">
+            <ul>
+              <li><a href="#" class="subnav__link">Life at TWU</a></li>
+              <li><a href="#" class="subnav__link">Life in Denton, Dallas, &amp; Houston</a></li>
+              <li><a href="#" class="subnav__link">Student Activities</a></li>
+              <li><a href="#" class="subnav__link">Student Leadership</a></li>
+              <li><a href="#" class="subnav__link">Housing &amp; Dining</a></li>
+              <li><a href="#" class="subnav__link">Fitness &amp; Recreation</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="#" class="nav__link">Athletics</a></li>
+      <li><a href="#" class="nav__link active">Giving</a>
+        <div class="subnav__list">
+          <div class="subnav__list--wrap">
+            <ul>
+              <li><a href="#" class="subnav__link">Why Give</a></li>
+              <li><a href="#" class="subnav__link">Our Priorities</a></li>
+              <li><a href="#" class="subnav__link">Giving Societies</a></li>
+              <li><a href="#" class="subnav__link">Ways to Give</a></li>
+              <li><a href="#" class="subnav__link">Give Online Now</a></li>
+              <li><a href="#" class="subnav__link">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="nav__list nav__list--cta">
+      <li><a href="#" class="nav__link nav__link--cta">Visit Our Campus</a></li>
+      <li><a href="#" class="nav__link nav__link--cta">Apply</a></li>
+      <li><a href="#" class="nav__link nav__link--cta">Request Information</a></li>
+    </ul>
+
+    <ul class="nav__list nav__list--sub">
+      <li><a href="#" class="nav__link nav__link--sub">Info for</a>
+        <ul class="subnav__list">
+          <li><a href="#" class="nav__link nav__link--sub">Accepted Students</a></li>
+          <li><a href="#" class="nav__link nav__link--sub">Current Students</a></li>
+          <li><a href="#" class="nav__link nav__link--sub">International Students</a></li>
+          <li><a href="#" class="nav__link nav__link--sub">Faculty and Staff</a></li>
+          <li><a href="#" class="nav__link nav__link--sub">Alumni</a></li>
+          <li><a href="#" class="nav__link nav__link--sub">Visitors</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="nav__link nav__link--sub">Campuses</a>
+        <ul class="subnav__list">
+          <li><a href="#" class="nav__link nav__link--sub">Denton</a></li>
+          <li><a href="#" class="nav__link nav__link--sub">Dallas</a></li>
+          <li><a href="#" class="nav__link nav__link--sub">Houston</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="nav__link nav__link--sub">About</a></li>
+      <li><a href="#" class="nav__link nav__link--sub">Libraries</a></li>
+      <li><a href="#" class="nav__link nav__link--sub">News &amp; Events</a></li>
+      <li><a href="#" class="nav__link nav__link--sub">A-Z Index</a></li>
+      <li><a href="#" class="nav__link nav__link--sub">Directories</a></li>
+    </ul>
+  </div>
+</nav>
+
+{% endif %}

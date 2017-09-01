@@ -1,0 +1,141 @@
+---
+title: Listing Page
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+<div class="wrap" id="main-content">
+  <div class="section section--tall-top">
+    {% include "modules/_breadcrumbs.html" %}
+    <h1>News &amp; Events</h1>
+  </div>
+
+  {% set nav = {type: 'subnav'} %}
+  {% include "modules/_nav.html" %}
+
+  <div class="main main--left">
+    <section class="section">
+      {% set feature = {type: 'news', image: true } %}
+      <h2>Featured News <a href="#" class="heading__link">See All</a></h2>
+      <div class="row">
+        <div class="col-sm-4">
+          {% include "modules/_feature.html" %}
+        </div>
+        <div class="col-sm-4">
+          {% include "modules/_feature.html" %}
+        </div>
+        <div class="col-sm-4">
+          {% include "modules/_feature.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          {% include "modules/_feature.html" %}
+        </div>
+        <div class="col-sm-4">
+          {% include "modules/_feature.html" %}
+        </div>
+        <div class="col-sm-4">
+          {% include "modules/_feature.html" %}
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="sidebar sidebar--right">
+    <section class="section">
+      <h3 class="h2">Events <a href="#" class="heading__link">See All</a></h3>
+      <div class="row">
+        <div class="col-sm-4 col-md-12">
+          {% set feature = {type: none} %}
+          {% include "modules/_feature.html" %}
+        </div>
+        <div class="col-sm-4 col-md-12">
+          {% include "modules/_feature.html" %}
+        </div>
+        <div class="col-sm-4 col-md-12">
+          {% include "modules/_feature.html" %}
+        </div>
+        <div class="col-sm-4 col-md-12">
+          {% include "modules/_feature.html" %}
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="wrap">
+  <div class="section">
+    <div class="section">
+      <h4>Editor's Pick</h4>
+
+      <div class="feature__pair">
+
+        <div class="feature__pair--image">
+          <img src="//placehold.it/900x600" alt="placeholder">
+        </div>
+
+        <div class="feature__pair--content">
+          <div class="feature__pair--title">
+            <a href="#">Texas Woman’s University Advocates for Women Entrepreneurs</a>
+          </div>
+          <p class="feature__pair--text">
+            At TWU, we see our role as bringing the knowledge, vision, and passion of Texas women to even greater heights. Through our new center for women in business, we will support women starting businesses as they grow their ideas and seek ways to fund their new start-ups and attract mentors.
+          </p>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="section">
+    <div class="section">
+      <h4>Top Stories</h4>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-md-12 clearfix">
+              {% set feature = {type: 'news', news: 'horizontal', image: true } %}
+              {% include "modules/_feature.html" %}
+            </div>
+            <div class="col-md-12 clearfix">
+              {% set feature = {type: 'news', news: 'horizontal', image: false } %}
+              {% include "modules/_feature.html" %}
+            </div>
+            <div class="col-md-12 clearfix">
+              {% set feature = {type: 'news', news: 'horizontal', image: true } %}
+              {% include "modules/_feature.html" %}
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-12 clearfix">
+              {% include "modules/_feature.html" %}
+            </div>
+            <div class="col-sm-12 clearfix">
+              {% include "modules/_feature.html" %}
+            </div>
+            <div class="col-sm-12 clearfix">
+              {% include "modules/_feature.html" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% include "modules/_juicer.html" %}
+</div>
+
+{% endblock %}

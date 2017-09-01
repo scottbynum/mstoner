@@ -1,0 +1,381 @@
+---
+title: Academic Program Finder
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+<div class="wrap">
+  <div class="heading">
+    {% include "modules/_breadcrumbs.html" %}
+    <h1>Find Resources</h1>
+  </div>
+</div>
+
+<div id="main-content">
+
+  <div class="tabs resource">
+  <div class="wrap wrap--wide">
+      <ul class="nav nav-tabs resource__tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#need" class="tab-link tab-prefilter button-grid__results" aria-controls="need" role="tab" data-toggle="tab" data-filter="need">I Need Help With...</a></li>
+        <li role="presentation"><a href="#audience" class="tab-link button-grid__results" aria-controls="audience" role="tab" data-toggle="tab" data-filter="audience">I Am A...</a></li>
+        <li role="presentation"><a href="#allresources" class="tab-link button-grid__reset" aria-controls="allresources" role="tab" data-filter="all" data-toggle="tab">All Resources</a></li>
+        <li role="presentation"><a href="#resourcesearch" class="tab-link button-grid__search" data-filter="search" aria-controls="resourcesearch" role="tab" data-toggle="tab">Search</a></li>
+      </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane active tab-content__resource" id="need">
+        <div class="wrap">
+          <div class="row resource__button-grid">
+            <div class="col-sm-4">
+              <a class="button-grid__link" href="#" data-filter="ba">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Health or Security</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link button-grid__link--edd" href="#" data-filter="edd">
+                <img src="//placehold.it/350x230" alt="placeholder">
+
+                <div class="tabbed__item__container">
+                  <p>Choosing Majors &amp; Courses</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link" href="#" data-filter="ba">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Covering the Costs of School</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link button-grid__link--edd" href="#" data-filter="edd">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Finding a Job</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link" href="#" data-filter="edd">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Living a Balanced Lifestyle</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link" href="#" data-filter="mfa">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Living on Campus</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link" href="#" data-filter="cert">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Living off Campus</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link" href="#" data-filter="ba">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Gaining Real-World Experience</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="button-grid__link" href="#" data-filter="ba">
+                <img src="//placehold.it/350x230" alt="placeholder">
+                <div class="tabbed__item__container">
+                  <p>Becoming More Involved</p>
+                </div>
+                <span class="tabbed__item__angle"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane tab-content__resource" id="audience">
+        <div class="wrap">
+          <div class="row resource__button-grid">
+           <div class="col-sm-4">
+            <a class="button-grid__link" href="#" data-filter="ba">
+              <img src="//placehold.it/350x230" alt="placeholder">
+              <div class="tabbed__item__container">
+                <p>Prospective Students</p>
+              </div>
+              <span class="tabbed__item__angle"></span>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a class="button-grid__link" href="#" data-filter="edd">
+              <img src="//placehold.it/350x230" alt="placeholder">
+              <div class="tabbed__item__container">
+                <p>Admitted Students</p>
+              </div>
+              <span class="tabbed__item__angle"></span>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a class="button-grid__link" href="#" data-filter="mfa">
+              <img src="//placehold.it/350x230" alt="placeholder">
+              <div class="tabbed__item__container">
+                <p>Parents &amp; Families</p>
+              </div>
+              <span class="tabbed__item__angle"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="allresources">
+    </div>
+    <div role="tabpanel" class="tab-pane" id="resourcesearch">
+    </div>
+
+  </div>
+</div>
+
+<div class="section--gray-lighter">
+  <div class="wrap">
+    <div class="resource__container">
+      <div class="resource__search__filter">
+        <label class="hide" for="resource-search-input">Search Resources</label>
+        <input class="search__input" type="search" placeholder="Search Resources" id="resource-search-input">
+        <button class="resource__search__button" type="submit"><span class="hide">Search</span>{{ svgstore('search') }}</button>
+      </div>
+      <div class="filter-showing">
+        Now Showing: <span class="filter-showing__active">All Programs</span>
+      </div>
+
+      <div class="block-grid-wrap">
+        <ul class="block-grid">
+          <li class="block-grid__item filter-ba">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Academic Advising
+            </a>
+          </li>
+          <li class="block-grid__item filter-edd">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Athletics
+            </a>
+          </li>
+          <li class="block-grid__item filter-mfa" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Bookstore
+            </a>
+          </li>
+          <li class="block-grid__item filter-mfa block-grid__item--edge">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Career Connections
+            </a>
+          </li>
+          <li class="block-grid__item filter-edd">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Center for Student Excellence
+            </a>
+          </li>
+          <li class="block-grid__item filter-cert">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Community Service
+            </a>
+          </li>
+          <li class="block-grid__item filter-cert block-grid__item--edge">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Commuter Services
+            </a>
+          </li>
+          <li class="block-grid__item filter-cert">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Conference Services
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Counseling Center
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba block-grid__item--edge" data-filter="need">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Disability Support Services
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-cert">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Diversity, Inclusion, and Outreach
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Education Abroad
+            </a>
+          </li>
+          <li class="block-grid__item" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Family Weekend
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba block-grid__item--edge" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Financial Aid
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-cert">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Fitness and Recreation
+            </a>
+          </li>
+          <li class="block-grid__item" data-filter="need audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Food Services
+            </a>
+          </li>
+          <li class="block-grid__item filter-cert block-grid__item--edge" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Go Centers
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-cert">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Greek Life
+            </a>
+          </li>
+          <li class="block-grid__item" data-filter="need audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Housing &amp; Residence Life
+            </a>
+          </li>
+          <li class="block-grid__item filter-mfa block-grid__item--edge" data-filter="need audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              ID Card Services
+            </a>
+          </li>
+          <li class="block-grid__item" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              International Education
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-ba">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Leadership
+            </a>
+          </li>
+          <li class="block-grid__item filter-mfa block-grid__item--edge">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Legal Services
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-cert">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              LGBTQIA
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Multicultural Student Network
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba block-grid__item--edge" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Orientation
+            </a>
+          </li>
+          <li class="block-grid__item" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Parent and Family Orientation
+            </a>
+          </li>
+          <li class="block-grid__item filter-cert filter-area3 filter-college6">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Parking
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-ba filter-area5 filter-college4">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Registrar
+            </a>
+          </li>
+          <li class="block-grid__item" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Scholarships
+            </a>
+          </li>
+          <li class="block-grid__item block-grid__item--edge" data-filter="audience">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Accounts
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-cert filter-area3 filter-college6">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Development
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba filter-area5 filter-college4">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Employment
+            </a>
+          </li>
+          <li class="block-grid__item filter-mfa filter-area6 filter-college3 block-grid__item--edge">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Government
+            </a>
+          </li>
+
+          <li class="block-grid__item filter-cert filter-area3 filter-college6">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Health Services
+            </a>
+          </li>
+          <li class="block-grid__item filter-ba filter-area5 filter-college4">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Life Office
+            </a>
+          </li>
+          <li class="block-grid__item filter-mfa filter-area6 filter-college3 block-grid__item--edge">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Student Organizations
+            </a>
+          </li>
+          <li class="block-grid__item filter-area3 filter-college4" data-filter="need">
+            <a class="button-block" data-ajax="ajax-resource.html">
+              Transportation
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

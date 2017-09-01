@@ -1,0 +1,156 @@
+---
+title: Sample Form
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+<div class="wrap">
+  <div class="heading">
+    {% include "modules/_breadcrumbs.html" %}
+    <h1>Form Example</h1>
+  </div>
+</div>
+
+
+
+<div class="main--full-width section--gray-lighter">
+  <div class="wrap">
+    <div class="resource__container">
+      
+
+      
+          <section class="section hide-image">
+         <h2>Dallas Undergraduate Nursing</h2>
+<form action="https://www.twu.edu/aspxmail2/default.aspx" class="mixed-left-top" id="commentForm" method="post" name="commentForm">
+  <input name="sendername" type="hidden" value="Automailer">
+  <input name="recipientname" type="hidden" value="Nursing Info Session Coordinator">
+  <input name="recipientmail" type="hidden" value="abonner@twu.edu">
+  <input name="subject" type="hidden" value="Nursing Info Session Registration">
+  <input name="redirect" type="hidden" value="http://www.twu.edu/nursing/nursing-information=session-confirmation">
+  <input name="userinfo" type="hidden" value="on">
+<div>
+  <div class="alert alert-danger">
+    <span>
+      <strong>*</strong> required fields
+    </span>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label required">First Name</label>
+        <span style="color: red;">*</span> 
+        <input class="form-control input-lg" name="first name" required="" type="text">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label required">Last Name</label>
+        <span style="color: red;">*</span> 
+        <input class="form-control input-lg" name="last name" required="" type="text">
+      </div>
+    </div>
+  </div>
+  <!--end row-->
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">Address</label><span style="color: red;">*</span> <input class="form-control input-lg" name="address" required="" type="text"></div>
+  </div>
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">City</label><span style="color: red;">*</span> <input class="form-control input-lg" name="city" required="" type="text"></div>
+  </div>
+  </div>
+  <!--end row-->
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">State</label><span style="color: red;">*</span> <input class="form-control input-lg" name="state" required="" type="text"></div>
+  </div>
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">Zip</label><span style="color: red;">*</span> <input class="form-control input-lg" name="zip" required="" type="text"></div>
+  </div>
+  </div>
+  <!--end row-->
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">Phone</label><span style="color: red;">*</span> <input class="form-control input-lg" name="phone" required="" type="text"></div>
+  </div>
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">Email</label><span style="color: red;">*</span> <input class="form-control input-lg" name="email" required="" type="email"></div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">Register me for the session on</label><span style="color: red;">*</span><select class="form-control input-lg" name="session" required="">
+  <option value="Apr14">April 14, 10am-12pm</option>
+  <option value="13">This is item 2</option>
+  <option value="14">This is item 3</option>
+  </select></div>
+  </div>
+  <!--</div>
+  <div class="row">-->
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">Nursing Program/Major of interest</label><span style="color: red;">*</span><select class="form-control input-lg" name="program" required="">
+  <option value="traditional">Tradional upper division</option>
+  <option value="weekend-evening">Weekend/evening</option>
+  <option value="second-bachelor">Second bachelors degree</option>
+  </select></div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">I will enter TWU as a</label><span style="color: red;">*</span><select class="form-control input-lg" name="level" required="">
+  <option value="freshman">Freshman Student</option>
+  <option value="transfer">Transfer Student</option>
+  <option value="graduate">Graduate Student</option>
+  </select></div>
+  </div>
+  <!--</div>
+  <div class="row">-->
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label required">I plan to enroll</label><span style="color: red;">*</span><select class="form-control input-lg" name="semester to enroll" required="">
+  <option value="fall17">Fall 2017</option>
+  <option value="spring18">Spring 2018</option>
+  </select></div>
+  </div>
+  </div>
+  <div class="form-group"><label class="control-label required" for="number-attending">Number attending</label><span style="color: red;">*</span> <input id="text-input" class="form-control input-lg" name="number-attending" required="" type="text"></div>
+  <div class="form-group"><label class="control-label required" for="current-school">Current School</label><span style="color: red;">*</span> <input id="text-input" class="form-control input-lg" name="Current School" required="" type="text"></div>
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group"><label class="control-label" for="comment">Other Comments?</label> <textarea id="comment" class="form-control input-lg" name="Other-Comments" type="textarea" rows="5"></textarea></div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group">Checkboxes for you to choose:
+  <div class="checkbox"><label><input type="checkbox" value="">Option 1</label></div>
+  <div class="checkbox"><label><input type="checkbox" value="">Option 2</label></div>
+  <div class="checkbox"><label><input type="checkbox" value="">Option 3</label></div>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-6">
+  <div class="form-group">Radio buttons for you to choose:
+  <div class="radio"><label><input name="optradio" type="radio">Option 1</label></div>
+  <div class="radio"><label><input name="optradio" type="radio">Option 2</label></div>
+  <div class="radio"><label><input name="optradio" type="radio">Option 3</label></div>
+  </div>
+  </div>
+  </div>
+  <div class="form-group"><button class="btn btn-primary" type="submit">Submit</button></div>
+  </div>
+</form>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</section>
+        
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

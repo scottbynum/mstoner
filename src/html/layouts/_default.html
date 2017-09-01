@@ -1,0 +1,26 @@
+{% from "util/_svgstore.html" import svgstore %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>{{ title }} - Texas Woman's University</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6710934/6144152/css/fonts.css" />
+  <script src="https://use.typekit.net/bee2zir.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+<body>
+  <div class="skip"><a href="#main-content">skip to main content</a></div>
+
+  {% include "modules/_header.html" %}
+  {% block content %}{% endblock %}
+  {% include "modules/_footer.html" %}
+
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div class="search__wrap" role="search">
+  <div class="wrap wrap--wide">
+    <form class="search__form" action="/search.html" method="get">
+      <label for="query" class="hide">Search</label>
+      <input class="search__input" type="search" placeholder="Search website" id="query" name="q">
+      <button class="search__button" type="submit"><span class="hide">Search</span>{{ svgstore('search') }}</button>
+    </form>
+    <button class="mobile--hidden btn search__close">
+      <span class="search__close--icon"><span class="hide">Close</span>{{ svgstore('close') }}</span>
+    </button>
+  </div>
+</div>

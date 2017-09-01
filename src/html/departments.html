@@ -1,0 +1,258 @@
+---
+title: Primary Landing Page (Departments)
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+{% include "modules/_hero.html" %}
+
+
+
+<div class="wrap">
+  <aside class="sidebar">
+    {% include "modules/_subnav.html" %}
+
+
+  </aside>
+
+  <main class="main" id="main-content">
+    {% include "modules/_breadcrumbs.html" %}
+
+    <section class="section">
+      <h2>The TWU Experience</h2>
+      <p class="p--large">
+        What makes attending the TWU School of Management transformational? It’s a combination of inspiring moments in the classroom, supportive faculty and staff, the close community spirit, and the School’s dedication to helping students realize their full potential in the 21st century.
+      </p>
+
+
+      <p>We will prepare you for the changing needs of business, industry, health care, government, and education and set you up for success in some of the nation’s fastest growing industries.</p>
+
+      <p>Because we offer a personalized learning environment with small class sizes, you will be immersed in a vibrant community of faculty and peers who share a passion for business.</p>
+
+      <div class="section">
+        <h3>Our Academic Programs</h3>
+
+        <p>Our programs and courses are offered in three formats: face-to-face, hybrid, or online. Face-to-face and hybrid courses are offered at a variety of day and time combinations. The format of each program varies and more specific information is available in the description of each program.</p>
+
+        <div class="row">
+          <div class="col-sm-6">
+            {% include "modules/_dropdown.html" %}
+          </div>
+          <div class="col-sm-6">
+            {% include "modules/_dropdown.html" %}
+          </div>
+        </div>
+
+      </div>
+      <div class="section">
+        <h3>Meet Our Faculty</h3>
+
+        <div class="row feature__faculty__slider">
+          {% set feature = {type: 'faculty'} %}
+          {% include "modules/_feature.html" %}
+          {% include "modules/_feature.html" %}
+          {% include "modules/_feature.html" %}
+          {% include "modules/_feature.html" %}
+          {% include "modules/_feature.html" %}
+          {% include "modules/_feature.html" %}
+          {% include "modules/_feature.html" %}
+          {% include "modules/_feature.html" %}
+        </div>
+        <a href="#" class="btn btn-default">View All Faculty</a>
+
+      </div>
+
+      <div class="section">
+        <h3>Dynamic Learning Opportunities</h3>
+        <div class="feature__large">
+          <div class="feature__large--image">
+            <img src="//placehold.it/960x640" alt="placeholder">
+            <div class="feature__large--title">
+              <a href="#">Cooperative Education (Co-op)</a>
+            </div>
+          </div>
+
+          <div class="feature__large--content">
+            <p>Co-op allows you to connect academic knowledge with the business and professional world. Co-op expands your education outside the classroom to paid employment in a work setting.
+            </p>
+            <h4 class="h5">Benefits of Co-op:</h4>
+            <ul>
+              <li>Apply classroom theory to actual work situations.</li>
+              <li>Test your interests and develop long-range career plans and career goals.</li>
+              <li>Enhance your marketability with on-the-job training.</li>
+              <li>Strengthen your problem-solving skills, self-confidence, self-discipline, and sense of responsibility.</li>
+              <li>Develop management skills through interactions in career settings.</li>
+            </ul>
+            <a href="#" class="btn btn-default btn--full-width">Find an Internship</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section">
+        <h3>Career Possibilities</h3>
+
+        <p>Your education from Texas Woman’s University’s School of Management will pay dividends. Our alumni include executives and entrepreneurs — with your degree, you will have many career paths to choose from, including opportunities in:</p>
+
+        <div class="row">
+          <div class="col-sm-3">
+            <ul>
+              <li>Accounting</li>
+              <li>Finance</li>
+              <li>Management</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3">
+            <ul>
+              <li>Retail and Sales</li>
+              <li>Marketing</li>
+              <li>Human Resources</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Our Alumni</h3>
+        <div class="pull-quote__container">
+          <div class="pull-quote__image">
+            <img class="img-circle" src="//placehold.it/150x150" alt="placeholder">
+          </div>
+          <div class="pull-quote">
+            <div class="pull-quote__text">
+              <p>
+                "Enrolling in the TWU EMBA program was just the best decision. I loved the program, the professors and looked forward to class every Saturday. It was just a pleasure just to be there."
+              </p>
+              <div class="pull-quote__text--author">
+                Tatiana Potinga, EMBA Class of 2014
+              </div>
+            </div>
+            <div class="pull-quote__paragraphs">
+              <p class="p--small">
+                <strong>Highlight of the program:</strong> Interning with the marketing department at Fairmont Hotels in London, England.
+              </p>
+
+              <p class="p--small">
+                <strong>The most valuable things I learned:</strong> Analytic skills, managerial decision-making, business law, and global business.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pull-quote__container">
+          <div class="pull-quote__image">
+            <img class="img-circle" src="//placehold.it/150x150" alt="placeholder">
+          </div>
+          <div class="pull-quote">
+            <div class="pull-quote__text">
+              <p>
+                "The MBA program lit an entrepreneurial interest in me and I knew it was the prescription I needed to start my own business – Pharmacy Toi.""
+              </p>
+              <div class="pull-quote__text--author">
+                Valerie Trang, EMBA Class of 2015
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Featured News <a href="#" class="heading__link">See All</a></h3>
+        <div class="row">
+          <div class="col-sm-4">
+            {% set feature = {type: 'news', image: true } %}
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Featured Events <a href="#" class="heading__link">See All</a></h3>
+        <div class="row">
+         <div class="col-sm-4">
+           {% set feature = {type: none} %}
+           {% include "modules/_feature.html" %}
+         </div>
+         <div class="col-sm-4">
+           {% include "modules/_feature.html" %}
+         </div>
+         <div class="col-sm-4">
+           {% include "modules/_feature.html" %}
+         </div>
+       </div>
+     </div>
+   </section>
+ </main>
+
+ <div class="sidebar sidebar--secondary">
+   <div class="sidebar__group">
+    <div class="sidebar__heading">
+      Related Fields
+    </div>
+
+    <ul class="ul--plain">
+      <li><a href="#">Mathematics &amp; Computer Science</a></li>
+      <li><a href="#">Health Care Administration</a></li>
+      <li><a href="#">Fashion &amp; Textiles</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar__group">
+    <div class="sidebar__social">
+      <ul>
+        <li><a aria-label="Facebook" href="#">{{ svgstore('facebook') }}</a></li>
+        <li><a aria-label="Twitter" href="#">{{ svgstore('twitter') }}</a></li>
+        <li><a aria-label="Instagram" href="#">{{ svgstore('instagram') }}</a></li>
+        <li><a aria-label="Linkedin" href="#">{{ svgstore('linkedin') }}</a></li>
+        <li><a aria-label="Snapchat" href="#">{{ svgstore('snapchat') }}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar__group">
+    <div class="sidebar__heading">School of Management</div>
+    <p>
+      P.O. Box 425738<br>
+      Denton, TX 76204-5738<br>
+      800-283-2291 (United States and Canada)<br>
+      940-898-2458 (Graduate)<br>
+      940-898-2957 (Undergraduate)<br>
+      940.898-2120 (Fax)<br>
+      <a href="#">som@twu.edu</a><br>
+    </p>
+    <p>
+      <strong>SOM Graduate Programs:</strong><br>
+      CFO 511 & 512, Denton Campus
+    </p>
+    <p>
+      <strong>SOM Undergraduate Programs:</strong><br>
+      CFO 501 & 514, Denton Campus
+    </p>
+  </div>
+</div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% if hero.type == 'home' %}
+
+<div class="hero hero__home">
+  <img src="//placehold.it/1440x684" alt="placeholder">
+
+  <div class="hero__wrap">
+    <div class="wrap">
+      <div class="hero__headline--icon"><span class="hide">Transformative Experiences</span></div>
+    </div>
+  </div>
+</div>
+
+{% elif hero.type == 'academic' %}
+
+<div class="hero">
+  <img src="//placehold.it/1440x684" alt="placeholder">
+</div>
+
+{% elif hero.type == 'giving' %}
+
+<div class="hero hero__giving" style="background-image: url('img/flowers.png');">
+  <div class="wrap">
+
+    <div class="hero__content">
+
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Forever Pioneering</h1>
+          <p>Texas Woman’s University is home to a number of remarkable women and men who have created a legacy of excellence through groundbreaking work in liberal arts, nursing, business, and education. Help create a lasting heritage that ignites potential, purpose, and a pioneering spirit.</p>
+        </div>
+        <div class="col-md-push-1 col-md-4 col-sm-push-3 col-sm-6 hero__content__btn__group">
+          <a href="#" class="btn btn-default btn-light btn--full-width">Why Give</a>
+          <a href="#" class="btn btn-default btn-light btn--full-width">Our Priorities</a>
+          <a href="#" class="btn btn-default btn-light btn--full-width">Giving Societies</a>
+          <a href="#" class="btn btn-default btn-light btn--full-width">Contact Us</a>
+          <a href="#" class="btn btn-default btn-light btn--full-width">Update Your Information</a>
+          <a href="#" class="btn btn-default btn-light btn--full-width">Give Online Now</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="hero__explore">
+          <p>Explore Different Ways to Give</p>
+          <div class="hero__explore__arrow">
+            <div class="hero__explore__arrow--icon">
+              {{ svgstore('arrow') }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+{% elif hero.type == 'residence' %}
+<div class="hero">
+<img src="//placehold.it/1440x820" alt="placeholder">
+
+  <div class="hero__headline text-center" id="main-content">
+    <div class="wrap">
+      Stark Hall
+
+      <nav aria-labelledby="breadcrumbs_heading">
+        <div class="hide" id="breadcrumbs_heading">You are here</div>
+        <ol class="breadcrumbs">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lorem Ipsum</a></li>
+          <li><span class="current">This Page</span></li>
+        </ol>
+      </nav>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+{% else %}
+
+
+<div class="hero">
+  <img src="//placehold.it/1440x684" alt="placeholder">
+
+  <div class="hero__headline">
+    <div class="wrap">
+      School of Management
+    </div>
+  </div>
+
+  <div class="hero__caption">
+    Our programs and courses are offered in three formats: face-to-face, hybrid, or online.
+  </div>
+
+</div>
+
+
+{% endif %}

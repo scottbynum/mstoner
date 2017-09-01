@@ -1,0 +1,249 @@
+---
+title: Homepage
+---
+
+{% extends "layouts/_default.html" %}
+
+
+{% block content %}
+
+{% set hero = {type: 'home'} %}
+{% include "modules/_hero.html" %}
+
+<div class="hero__tabs__wrap" id="main-content">
+  <div class="tabs">
+    <ul class="nav nav-tabs hero__tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#home" class="tab-link" aria-controls="home" role="tab" data-toggle="tab">Learn from the Best</a></li>
+      <li role="presentation"><a href="#profile" class="tab-link" aria-controls="profile" role="tab" data-toggle="tab">Become a Leader</a></li>
+      <li role="presentation"><a href="#messages" class="tab-link" aria-controls="messages" role="tab" data-toggle="tab">Prepare for Success</a></li>
+    </ul>
+    <div class="wrap">
+      <div class="tab-content hero__tab__container">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div class="row">
+            <div data-speed="0.18" class="hero__tab__img parallax-img">
+              <img src="//placehold.it/670x447" alt="placeholder">
+            </div>
+            <div data-speed="0.1" class="hero__tab__card parallax-card">
+              <div class="h1">Learn from the Best</div>
+              <p>TWU is full of <a href="#">independent thinkers</a> who aren’t afraid to be bold, challenge the status quo, and make their own path in the world.</p>
+            </div>
+          </div>
+
+          <div class="row hero__tab__content">
+            <div class="col-sm-4">
+              <div class="figure__count--number"><span class="countup">367</span></div>
+              <p>TWU graduates are now in executive leadership positions</p>
+            </div>
+            <div class="col-sm-4">
+              <div class="figure__count--number"><span class="countup">1284</span></div>
+              <p>Hours of volunteer service provided by the TWU community</p>
+            </div>
+            <div class="col-sm-4">
+              <div class="figure__count--number"><span class="countup">109</span></div>
+              <p>TWU student organizations provide networking and leadership training</p>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+         <div class="row">
+          <div class="hero__tab__img parallax-img-copy">
+            <img src="//placehold.it/670x447" alt="placeholder">
+          </div>
+          <div class="hero__tab__card parallax-card-copy">
+            <div class="h1">Become a Leader</div>
+            <p>TWU is full of <a href="#">independent thinkers</a> who aren’t afraid to be bold, challenge the status quo, and make their own path in the world.</p>
+          </div>
+        </div>
+
+        <div class="row hero__tab__content">
+          <div class="col-sm-4">
+            <div class="figure__count--number"><span class="countup">55</span></div>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="figure__count--number"><span class="countup">144</span></div>
+            <p>Vestibulum at magna in enim tristique semper at a purus</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="figure__count--number"><span class="countup">22</span></div>
+            <p>Nulla sit amet diam nec mauris efficitur tristique</p>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="messages">
+       <div class="row">
+        <div class="hero__tab__img parallax-img-copy">
+          <img src="//placehold.it/670x447" alt="placeholder">
+        </div>
+        <div class="hero__tab__card parallax-card-copy">
+          <div class="h1">Prepare for Success</div>
+          <p>TWU is full of <a href="#">independent thinkers</a> who aren’t afraid to be bold, challenge the status quo, and make their own path in the world.</p>
+        </div>
+      </div>
+
+      <div class="row hero__tab__content">
+        <div class="col-sm-4">
+          <div class="figure__count--number"><span class="countup">6777</span></div>
+          <p>Aenean non ligula id nisi dapibus suscipit</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="figure__count--number"><span class="countup">888</span></div>
+          <p>Duis id justo in ante rhoncus fringilla</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="figure__count--number"><span class="countup">101</span></div>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="block">
+
+  <div class="skew" style="background-image: url('img/angle-img.png');">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="block__content text-center">
+          <div class="h1">Find Your Program</div>
+          <p>Our programs provide a foundation for a rigorous academic experience through high quality undergraduate, graduate, and professional programs both on campus and at a distance.</p>
+
+          <div class="block__search" role="search">
+            <form class="search__form" method="GET" action="program-finder.html">
+              <label for="block-search" class="hide">Search Programs</label>
+              <input class="search__input" type="search" placeholder="What program can we help you find?" id="block-search" name="search">
+              <button class="search__button" type="submit"><span class="hide">Search</span>{{ svgstore('search') }}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="skew-before"></div>
+    <div class="skew-after"></div>
+
+  </div>
+</div>
+
+
+<div class="wrap">
+  <section class="section">
+    <div class="text-center">
+      <h2>A Place to Succeed</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 zoomin">
+        {% set feature = {type: 'student'} %}
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-4 zoomin">
+        {% include "modules/_feature.html" %}
+      </div>
+      <div class="col-sm-4 zoomin">
+        {% include "modules/_feature.html" %}
+      </div>
+    </div>
+  </section>
+
+  <div class="section">
+    <div class="row block__feature">
+      <div class="col-sm-8 col-sm-push-4 vertical-center-child feature--spacing">
+        <img src="//placehold.it/756x504" alt="placeholder">
+      </div>
+      <div class="col-sm-4 col-sm-pull-8 vertical-center-child feature--spacing">
+        <blockquote class="blockquote--alt">
+          <p class="block__feature--quote">
+            “The facility is beautiful and it is in the perfect location in the medical center. We are right here amongst the very best.”
+          </p>
+          <cite>Professor Firstname Lastname</cite>
+        </blockquote>
+        <p>Professor Lastname is researching cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum en duis tincidu.</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="block--break">
+  <div class="block">
+
+    <div class="skew" style="background-image: url('img/angle-img.png');">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="block__content--alt">
+            <div class="h2">Education is an Experience</div>
+            <p class="block__text">With three locations in Denton, Dallas, and Houston students experience the benefits of our tight-knit community and hands-on professors, as well as access to some of the largest health science centers in the country. Through a variety of academic programs and internship opportunities, we seek to lead our students to a fulfilling life of leadership and service.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="skew-before"></div>
+    </div>
+  </div>
+</div>
+
+
+{% set footer = {type: 'pre-footer'} %}
+{% include "modules/_footer.html" %}
+{% set footer = {type: 'none'} %}
+
+<div class="section">
+  <div class="wrap">
+    <div class="main main--left">
+      <div class="section">
+        {% set feature = {type: 'news', news: 'alt', image: true } %}
+        <h3 class="{% if (feature.news == 'alt') %} feature__heading--alt{% endif %}">Featured News <a href="#" class="heading__link">See All</a></h3>
+        <div class="row">
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+          <div class="col-sm-4">
+            {% include "modules/_feature.html" %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar sidebar--right">
+      <div class="section">
+        <h3>Events <a href="#" class="heading__link">See All</a></h3>
+        <div class="row">
+          <div class="col-sm-4 col-md-12">
+           {% set feature = {type: none} %}
+           {% include "modules/_feature.html" %}
+         </div>
+         <div class="col-sm-4 col-md-12">
+           {% include "modules/_feature.html" %}
+         </div>
+         <div class="col-sm-4 col-md-12">
+           {% include "modules/_feature.html" %}
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% if (footer.type == 'pre-footer') %}
+<div class="{% if footer.alt == true %} pre-footer--alt {% else %} pre-footer {% endif %}">
+  <div class="wrap">
+    <div class="row">
+      <div class="col-sm-4 pre-footer__col">
+        <div class="pre-footer__icon">
+          {{ svgstore('denton') }}
+        </div>
+        <div class="pre-footer__location">
+          Denton
+        </div>
+        <p class="pre-footer__text">More than 12,000 students study at TWU’s Denton campus, which offers programs in the liberal arts, the sciences, business, and education.</p>
+      </div>
+      <div class="col-sm-4 pre-footer__col">
+        <div class="pre-footer__icon">
+          {{ svgstore('dallas') }}
+        </div>
+        <div class="pre-footer__location">
+          Dallas
+        </div>
+        <p class="pre-footer__text">
+          The <a href="#">TWU T. Boone Pickens Institute of Health Sciences</a> in Dallas offers programs in nursing, occupational therapy, physical therapy, health systems management, and an EMBA.
+
+        </p>
+      </div>
+      <div class="col-sm-4 pre-footer__col">
+        <div class="pre-footer__icon">
+          {{ svgstore('houston') }}
+        </div>
+        <div class="pre-footer__location">
+          Houston
+        </div>
+        <p class="pre-footer__text">The <a href="#">TWU Institute of Health Sciences in Houston</a> offers programs in health care administration, nursing, nutrition and food sciences, occupational therapy, physical therapy, and an EMBA.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+<footer class="footer">
+  <div class="footer__wrap">
+    <div class="wrap">
+      <div class="footer__social">
+        <ul>
+          <li><a class="footer__social--icon" aria-label="Facebook" href="#">{{ svgstore('facebook') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Twitter" href="#">{{ svgstore('twitter') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Instagram" href="#">{{ svgstore('instagram') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Linkedin" href="#">{{ svgstore('linkedin') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Google Plus" href="#">{{ svgstore('google_plus') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Youtube" href="#">{{ svgstore('youtube') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Snapchat" href="#">{{ svgstore('snapchat') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Pinterest" href="#">{{ svgstore('Pinterest') }}</a></li>
+          <li><a class="footer__social--icon" aria-label="Blogger" href="#">{{ svgstore('Blogger') }}</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <div class="row">
+          <div class="col-xs-12 col-lg-4">
+            <ul>
+              <li><a href="#">Careers at TWU</a></li>
+              <li><a href="#">Web Policies &amp; Contacts</a></li>
+              <li><a href="#">Emergency Contact Information</a></li>
+              <li><a href="#">Required Texas State Resources</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-lg-4">
+            <ul>
+              <li><a href="#">My Courses (Blackboard)</a></li>
+              <li><a href="#">Pioneer Portal</a></li>
+              <li><a href="#">Webmail</a></li>
+              <li><a href="#">Service Desk</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-lg-3">
+            <div class="footer__contact">
+              Texas Woman's University<span class="break"></span>
+              304 Administration Dr,<span class="break"></span>
+              Denton, TX 76204 <span class="break"></span>
+              940-898-2000
+
+            </div>
+            <div class="copyright">&copy; 2016 Texas Woman's University</div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="footer__cr">
+      <div class="wrap">
+
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% endif %}
