@@ -1,0 +1,45 @@
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+
+}
+
+.grid--center {
+  justify-content: center;
+}
+
+.grid--narrow {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.grid__item {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 1rem;
+}
+
+.grid__item--match {
+  flex-flow: row wrap;
+  > * {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+
+.grid__item--narrow {
+  padding: 0 0.5rem;
+}
+
+.grid__item--2 {
+  @include mq(48em) {
+    float: left;
+    width: 50%;
+    &:nth-child(2n+1) {
+      clear: both;
+    }
+  }
+}
+

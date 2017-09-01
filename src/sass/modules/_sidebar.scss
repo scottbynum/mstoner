@@ -1,0 +1,34 @@
+.sidebar__group {
+  margin: 2rem 0;
+  p {
+    @include font-size(14);
+  }
+}
+
+.sidebar__heading {
+  @extend .h6;
+}
+
+.sidebar__social {
+  ul {
+    @include clean;
+  }
+  li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  li:not(:last-child) {
+    padding-right: 1rem;
+  }
+  a {
+    width: 1.5rem;
+    display: block;
+    color: $gray;
+    background-image: none;
+    &:hover,
+    &:focus {
+      color: $maroon;
+      background-image: none;
+    }
+  }
+}

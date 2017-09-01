@@ -1,0 +1,194 @@
+$minScreen: 320px;
+$maxScreen: 1440px;
+
+body {
+  font-family: $serif;
+  @include font-size(17);
+  line-height: 1.667;
+  color: $gray-dark;
+}
+
+
+h1,
+.h1 {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  @include fluid-type(font-size, $minScreen, $maxScreen, 36px, 49px);
+  font-weight: $bold;
+  line-height: 1.0952;
+  color: $maroon;
+  font-family: $serif;
+}
+
+h2,
+.h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  @include fluid-type(font-size, $minScreen, $maxScreen, 32px, 41px);
+  font-weight: normal;
+  line-height: 1.125;
+  color: $maroon;
+  font-family: $sans-serif;
+}
+
+h3,
+.h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  @include fluid-type(font-size, $minScreen, $maxScreen, 28px, 35px);
+  font-weight: normal;
+  line-height: 1.2857;
+}
+
+h4,
+.h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  @include font-size(25);
+  font-weight: normal;
+  font-family: $sans-serif;
+  line-height: 1.2308;
+}
+
+h5,
+.h5 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  @include font-size(21);
+  font-family: $sans-serif;
+  font-weight: normal;
+  line-height: 1.3636;
+}
+
+h6,
+.h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  @include font-size(17);
+  font-family: $sans-serif;
+  font-weight: normal;
+  line-height: 1.3333;
+}
+
+
+a:not([class]) {
+  @include underline($color: rgba($blue, .3));
+  &:hover {
+    @include underline;
+    text-decoration: none;
+  }
+}
+a {
+  color: $blue-light;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+hr {
+  @include spacing(4);
+  border-top: 0.0625rem solid $gray;
+}
+
+ul,
+ol {
+  @include spacing;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+.p--large {
+  @include font-size(19);
+  color: $gray;
+  line-height: 1.778rem;
+  font-weight: $bold;
+}
+
+p {
+  line-height: 1.556rem;
+  margin: 0 0 1.111rem 0;
+}
+
+.p--small {
+  @include font-size(14);
+  margin-bottom: 1.333rem;
+  line-height: 1.556rem;
+}
+
+.p--mid {
+  @include font-size(16);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.heading__link {
+  font-family: $serif;
+  float: right;
+  @include font-size(14);
+  @include underline($color: rgba($blue, .3));
+  margin-top: 1.2rem;
+  &:hover {
+    @include underline;
+  }
+}
+
+blockquote {
+  border-left: 0;
+  position: relative;
+  margin: 3rem 0;
+  &:before {
+    @include fill($svgstore--quote_fill, $white);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    width: 4.1rem;
+    height: 4.1rem;
+    content: '';
+    background-size: 100%;
+  }
+  p {
+    @include font-size(18);
+    line-height: 1.35;
+    margin-left: 5rem;
+  }
+  cite {
+    display: block;
+    font-family: $sans-serif;
+    @include font-size(14);
+    font-style: normal;
+    margin-top: 0.5rem;
+  }
+}
+
+.blockquote--alt {
+  padding: 0;
+  &:before {
+    @include fill($svgstore--quote_fill, $white);
+    background-repeat: no-repeat;
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    margin-left: 0;
+  }
+  cite {
+    text-align: center;
+  }
+}
+
+.ul--plain {
+  @include clean;
+  list-style: none;
+}
+
+.p--maroon {
+  color: $maroon;
+}

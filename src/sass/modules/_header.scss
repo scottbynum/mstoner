@@ -1,0 +1,118 @@
+.header__small {
+  background-color: $gray-lighter;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  @include mq(64em) {
+    display: none;
+  }
+}
+
+.header__small__menu--toggle,
+.header__small__search--toggle {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border-radius: 0;
+}
+
+.header__small__search--toggle {
+  @include mq(64em) {
+    background-color: $maroon;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      background-color: $maroon;
+      height: 0.5rem;
+      left: -0.05rem;
+      bottom: -0.5rem;
+      width: 104%;
+
+    }
+    &:hover,
+    &:focus {
+      background-color: $red;
+      &:after {
+        background-color: $red;
+      }
+    }
+  }
+}
+
+.header__small__menu--toggle {
+  .menu-active & {
+    background-color: $maroon;
+  }
+}
+
+.header__small__search--toggle {
+  float: right;
+  .search-active & {
+    background-color: $maroon;
+  }
+}
+
+.header__small__menu-toggle--open,
+.header__small__search-toggle--open {
+  color: $maroon;
+  @include mq(64em) {
+    color: $white;
+    .svgstore--search {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.header__small__menu-toggle--close,
+.header__small__search-toggle--close {
+  color: $white;
+}
+
+.header__small__menu-toggle--open {
+  @include show;
+  visibility: visible;
+  .menu-active & {
+    @include hide;
+    visibility: hidden;
+  }
+}
+.header__small__menu-toggle--close {
+  @include hide;
+  visibility: hidden;
+  .menu-active & {
+    @include show;
+    visibility: visible;
+  }
+}
+
+.header__small__search-toggle--open {
+  @include show;
+  visibility: visible;
+  .search-active & {
+    @include hide;
+    visibility: hidden;
+  }
+}
+.header__small__search-toggle--close {
+  @include hide;
+  visibility: hidden;
+  .search-active & {
+    @include show;
+    visibility: visible;
+  }
+}
+
+.header__logo {
+  display: block;
+  margin: 5.215rem 0rem 3.1rem 0rem;
+  @include mq(43em) {
+    margin: 5.125rem 0rem 2.25rem 0rem;
+    width: 40rem;
+  }
+  @include mq(64em) {
+    margin: 3.275rem 0rem 3.275rem .65rem;
+    width: 40rem;
+  }
+}

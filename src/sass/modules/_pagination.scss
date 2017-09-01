@@ -1,0 +1,38 @@
+.pagination {
+  font-family: $sans-serif;
+  li > a {
+    &:hover,
+    &:focus {
+      border-color: $white;
+      color: $white;
+      border-radius: 0;
+      background-color: $red;
+    }
+  }
+  .pagination__link {
+    background-color: $gray-lighter;
+    &:hover,
+    &:focus {
+
+    }
+  }
+}
+
+.pagination__link--left,
+.pagination__link--right {
+  padding: 1rem;
+  span {
+    display: inline-block;
+    width: 1rem;
+  }
+}
+
+.pagination__link--left span {
+  transform: rotate(45deg);
+}
+
+.pagination__link--right span {
+  transform: rotate(-45deg);
+}
+
+

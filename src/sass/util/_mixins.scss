@@ -1,0 +1,279 @@
+// Font sizing
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 16) + rem;
+}
+
+// Fluid type for width dimensions
+// @include fluid-type(font-size, $minScreen, $maxScreen, 30px, 40px);
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// clearfix
+@mixin clear {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+// underline
+@mixin underline($color: currentColor, $position: 90%, $size: 0.0625rem) {
+  background-image: linear-gradient($color, $color);
+  background-repeat: repeat-x;
+  background-position: 0 $position;
+  background-size: 100% $size;
+}
+
+
+// Clear margin and padding
+@mixin clean {
+  margin: 0;
+  padding: 0;
+}
+
+// zero margins
+@mixin zero {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// hide
+@mixin hide {
+  position: absolute;
+  left: -999rem;
+}
+
+// show
+@mixin show {
+  position: static;
+  left: auto;
+}
+
+// min-width media query
+@mixin mq($min: 0, $max: 0) {
+  @if ($min > 0 and $max > 0) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+  @else if ($min > 0) {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+  @else if ($max > 0) {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+// svg color fill
+@mixin fill($svg, $color) {
+  $color: str-slice(#{$color}, 2);
+  $insert: 'fill%3D%22%23#{$color}%22%20';
+  $index: str-index($svg, '%3Csvg%20') + 9;
+  background-image: str-insert($svg, $insert, $index);
+}
+
+// Vertically center
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// spacing
+@mixin spacing($x: 1) {
+  margin-top: 1.25rem * $x;
+  margin-bottom: 1.25rem * $x;
+}
+
+//-------------------------------------------------------------------------------------
+// Angled Edges v1.0.4 (https://github.com/josephfusco/angled-edges)
+// Copyright 2016 Joseph Fusco
+// Licensed under MIT (https://github.com/josephfusco/angled-edges/blob/master/LICENSE)
+//-------------------------------------------------------------------------------------
+
+/// Replace `$search` with `$replace` in `$string`
+///
+/// @author Hugo Giraudel
+/// @link   http://www.sassmeister.com/gist/1b4f2da5527830088e4d
+///
+/// @param  {String}  $string - Initial string
+/// @param  {String}  $search - Substring to replace
+/// @param  {String}  $replace ('') - New value
+/// @return {String}  Updated string
+///
+@function ae-str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + ae-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+/// Encode SVG to use as background
+///
+/// @param  {String}  $string
+/// @return {String}  Encoded svg data
+///
+@function ae-svg-encode($string){
+  $result: ae-str-replace($string, '<svg', "<svg xmlns='http://www.w3.org/2000/svg'");
+  $result: ae-str-replace($result, '%', '%25');
+  $result: ae-str-replace($result, '"', '%22');
+  $result: ae-str-replace($result, "'", '%27');
+  $result: ae-str-replace($result, ' ', '%20');
+  $result: ae-str-replace($result, '<', '%3C');
+  $result: ae-str-replace($result, '>', '%3E');
+  @return 'data:image/svg+xml,' + $result;
+}
+
+/// Outputs pseudo content for main mixin
+///
+/// @author Joseph Fusco
+///
+/// @param  {String}  $location
+/// @param  {Number}  $height
+/// @output psuedo content
+///
+@mixin ae-pseudo($wedge, $height) {
+  background-image: url($wedge);
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: $height * 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/// Attatches an svg wedge shape to an element
+///
+/// @author Joseph Fusco
+///
+/// @param  {String}  $location   - 'inside top', 'outside top', 'inside bottom', 'outside bottom'
+/// @param  {String}  $hypotenuse - 'upper left', 'upper right', 'lower left', 'lower right'
+/// @param  {Color}   $fill
+/// @param  {Number}  $width
+/// @param  {Number}  $height
+/// @output '::before' and/or "::after" with svg background image
+///
+@mixin angled-edge($location, $hypotenuse, $fill, $width: 2800, $height: 100) {
+
+  // polygon points for right triangle
+  $points: (
+    'upper left': '0,#{$height} #{$width},#{$height} #{$width},0',
+    'upper right': '0,#{$height} #{$width},#{$height} 0,0',
+    'lower left': '0,0 #{$width},#{$height} #{$width},0',
+    'lower right': '0,0 #{$width},0 0,#{$height}'
+  );
+
+  // ensure $fill color is using rgb()
+  $fill-rgb: 'rgb(' + round(red($fill)) + ',' + round(green($fill)) + ',' + round(blue($fill)) + ')';
+
+  // capture alpha component of $fill to use with fill-opacity
+  $fill-alpha: alpha($fill);
+
+  $wedge: ae-svg-encode('<svg height="#{$height}" width="#{$width}" fill="#{$fill-rgb}" fill-opacity="#{$fill-alpha}"><polygon points="#{map-get($points, $hypotenuse)}"></polygon></svg>');
+
+  position: relative;
+
+  @if ($location == 'inside top') {
+    &::before {
+      @include ae-pseudo($wedge, $height);
+      top: 0;
+    }
+  } @else if ($location == 'outside top') {
+    &::before {
+      @include ae-pseudo($wedge, $height);
+      top: -$height * 1px;
+    }
+  } @else if ($location == 'inside bottom') {
+    &::after {
+      @include ae-pseudo($wedge, $height);
+      bottom: 0;
+    }
+  } @else if ($location == 'outside bottom') {
+    &::after {
+      @include ae-pseudo($wedge, $height);
+      bottom: -$height * 1px;
+    }
+  } @else {
+    @error "Invalid argument for $location. Must use: 'inside top', 'outside top', 'inside bottom', 'outside bottom'";
+  }
+}
+
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.animated {
+  visibility: visible !important;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.bounceInDown {
+  animation-name: bounceInDown;
+}

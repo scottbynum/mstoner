@@ -1,0 +1,128 @@
+.slider {
+
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    width: 3.5rem;
+    font-size: 0;
+    background: transparent;
+    color: $white;
+    top: 50%;
+    margin-top: -10px\9; /*lte IE 8*/
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    z-index: 100;
+
+    &.slick-disabled:before {
+      opacity: 1;
+    }
+  }
+
+  .slick-prev {
+    left: 0rem;
+    @include mq(48em) {
+      left: 2rem;
+    }
+    .svgstore--arrow_left {
+      padding: 1rem;
+    }
+  }
+
+  .slick-next {
+    right: 0rem;
+    @include mq(48em) {
+      right: 2rem;
+    }
+    .svgstore--arrow_right {
+      padding: 1rem;
+    }
+  }
+}
+
+.slider__content {
+  position: relative;
+  color: $white;
+  font-weight: 300;
+  z-index: 1;
+  padding-bottom: 2rem;
+  @include mq(48em) {
+    padding: 10rem 2rem;
+  }
+}
+
+
+.slider__text {
+  color: $white;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.slider__text__quote {
+  @include font-size(22);
+  line-height: 1.9;
+  margin-top: 4rem;
+  @include mq(48em) {
+    padding-left: 2rem;
+  }
+  @include mq(64em) {
+    margin-top: 0;
+    @include font-size(31);
+
+  }
+  @include mq(80em) {
+    padding-left: 6rem;
+  }
+}
+
+.slider__quote--icon {
+  display: block;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  color: $orange;
+  border-radius: 50%;
+  background-color: $white;
+  padding: 1.1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  @include mq(80em) {
+    float: left;
+  }
+}
+
+
+.slider__text--name {
+  font-family: $sans-serif;
+  float: right;
+}
+
+.slider__text--link {
+  @include underline($color: rgba($white, .3));
+  color: $white;
+  &:hover {
+    color: $white;
+    @include underline;
+    text-decoration: none;
+  }
+}
+
+.slider__img {
+
+  @include mq(62em) {
+    position: absolute;
+    top: -9rem;
+    float: right;
+  }
+  img {
+    border-radius: .3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

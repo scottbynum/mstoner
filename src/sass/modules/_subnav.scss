@@ -1,0 +1,123 @@
+.sidebar-subnav {
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: none;
+  @include font-size(14);
+  font-family: $sans-serif;
+  background-color: $gray-lighter;
+}
+
+.sidebar-subnav--nested {
+  @include hide;
+  @include clean;
+  li {
+    list-style: none;
+    padding: 0 2rem;
+  }
+  .sidebar-subnav__item--active > & {
+    @include show;
+  }
+}
+
+.sidebar-subnav__item {
+  display: flex;
+  flex-wrap: wrap;
+  // white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.sidebar-subnav__toggle {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: 2.9375rem;
+  float: right;
+  padding: 1rem;
+  color: $gray;
+  &:hover {
+    color: $white;
+    background-color: $maroon;
+  }
+  .sidebar-subnav__item--active > & {
+    .sidebar-subnav__toggle {
+      color: $gray;
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $maroon;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+    .sidebar-subnav__toggle--open {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.sidebar-subnav__toggle--open {
+  width: 1rem;
+  display: block;
+
+}
+
+.sidebar-subnav__link {
+  display: block;
+  order: -1;
+  width: 100%;
+  padding: 0.7rem 0.7rem 0.7rem 1.3rem;
+  color: $gray;
+  white-space: normal;
+  &:hover {
+    color: $white;
+    background-color: $maroon;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .sidebar-subnav__toggle + & {
+    width: calc(100% - 2.9375rem);
+  }
+}
+
+.sidebar-subnav__link--nested {
+  @include font-size(15);
+  font-family: $serif;
+  color: $gray;
+  white-space: normal;
+  &:hover,
+  &:focus {
+    color: $maroon;
+  }
+
+}
+
+.sidebar-subnav__toggle ~ [class^="currentbranch"] {
+  order: -1;
+}
+
+[class^="currentbranch"] {
+  .sidebar-subnav__toggle + & {
+    width: calc(100% - 2.9375rem);
+  }
+}
+
+[class^="currentbranch"] > a {
+  color: $maroon;
+  display: block;
+  order: -1;
+  width: 100%;
+  padding: 0.7rem 0.7rem 0.7rem 1.3rem;
+  background-image: none;
+  &:hover {
+    color: $maroon;
+    background-image: none;
+  }
+}
+
+.sidebar-subnav--nested {
+  [class^="currentbranch"] > a {
+    padding: 0;
+  }
+}

@@ -1,0 +1,55 @@
+.pull-quote__container {
+  margin: 3rem 0;
+  position: relative;
+  @include mq(48em) {
+    padding-left: 4.5rem;
+  }
+}
+
+.pull-quote {
+  border-top: .4rem solid $maroon;
+  background-color: $gray-lighter;
+    padding: 12rem 2rem 2rem 2rem;
+  @include mq(48em) {
+    padding: 2rem 2rem 2rem 5rem;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 3rem 3rem 0;
+    border-color: transparent $maroon transparent transparent;
+    right: 0;
+    top: 0;
+  }
+}
+
+.pull-quote__image {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  @include mq(48em) {
+    left: 0;
+    width: 8rem;
+  }
+}
+
+.pull-quote__text {
+  margin-bottom: 2rem;
+  p {
+    @include font-size(20);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.pull-quote__text--author {
+  font-family: $sans-serif;
+  @include font-size(14);
+}
+
+.pull-quote__paragraphs {
+  padding-right: 2rem;
+}

@@ -1,0 +1,286 @@
+.feature {
+  margin-bottom: 3.75rem;
+  img {
+    width: 100%;
+  }
+}
+
+.feature__large {
+  position: relative;
+}
+
+.feature__large--image {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: $black-gradient;
+  }
+}
+
+.feature__large--title {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  a {
+    @include font-size(25);
+    color: $white;
+    background-image: none;
+  }
+}
+
+.feature__large--content {
+  @include clear;
+  background: $gray-lighter;
+  padding: 2rem;
+  ul {
+    margin-bottom: 2rem;
+  }
+}
+
+.feature__block,
+.feature__event {
+  font-family: $sans-serif;
+}
+
+.feature__heading--alt {
+  margin-bottom: 5rem;
+}
+
+.feature__image--wrap {
+  float: left;
+  width: 25%;
+  margin-right: 1rem;
+
+}
+
+.feature__block--wrap {
+  min-height: 5rem;
+  overflow: hidden;
+}
+
+
+
+.feature__block--link {
+  position: relative;
+  margin: 1rem 0 2rem 0;
+  @include font-size(17);
+}
+
+.feature__event {
+  min-height: 8rem;
+}
+
+.feature__event--date {
+  display: inline-block;
+  border-radius: 0.3rem;
+  border: .3rem solid $gray-light;
+  padding: 0.2rem 1rem;
+  .feature__event--active & {
+    border: .3rem solid $blue;
+  }
+}
+
+.feature__event--link {
+  margin-top: 1rem;
+}
+
+.feature__faculty__slider {
+  margin-bottom: 2rem;
+  .feature__block {
+    margin: 0 1rem;
+  }
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    width: 3.5rem;
+    font-size: 0;
+    background: $white;
+    color: $maroon;
+    top: 50%;
+    margin-top: -10px\9; /*lte IE 8*/
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    z-index: 10;
+
+    @include mq(64em) {
+      top: -4rem;
+    }
+    &.slick-disabled:before {
+      opacity: 1;
+    }
+  }
+
+  .slick-prev {
+    right: 3rem;
+    .svgstore--arrow_left {
+      padding: 1rem;
+    }
+  }
+
+  .slick-next {
+
+    @include mq(64em) {
+      right: 0rem;
+    }
+    .svgstore--arrow_right {
+      padding: 1rem;
+    }
+  }
+}
+
+.feature__block__faculty--link {
+  @include font-size(21);
+  margin-top: 1rem;
+}
+
+.feature__block__faculty--title {
+  @include font-size(14);
+}
+
+.feature__block__faculty--text{
+  @include font-size(17);
+  margin-top: 1rem;
+}
+
+.feature__block__faculty--image {
+  position: relative;
+}
+
+.feature__block__faculty__angle--wrap {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  transition: top 300ms ease-in-out;
+  .feature__block__faculty--is-active & {
+    top: 0;
+
+  }
+}
+.feature__block__faculty--angle {
+  @include angled-edge('inside bottom', 'upper right', rgba($orange, .65), $height: 100);
+  pointer-events: none;
+
+}
+
+.feature__block__faculty--content {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+
+}
+
+.feature__block__faculty__content--text {
+  font-family: $serif;
+  color: $white;
+  @include font-size(19);
+  padding: 2rem;
+  z-index: 2;
+  height: 100%;
+  margin: 0;
+  background-color: rgba($orange, .65);
+  transition: all 300ms ease-in-out;
+  transform: translateY(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .feature__block__faculty--is-active & {
+    transform: translateY(0);
+    transition: all 300ms ease-in-out;
+  }
+
+}
+
+.feature__block__student--text {
+  @include font-size(15);
+  line-height: 1.86;
+}
+
+.feature__block__student--name {
+  @include font-size(22);
+  font-family: $sans-serif;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.feature__block__residence--name {
+  font-family: $sans-serif;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.feature--spacing {
+  @include mq(64em) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.feature__media {
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.feature__media__image {
+  transition: transform 500ms ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+  .feature__block--active & {
+    transform: scale(1.2);
+  }
+}
+
+
+.feature__pair {
+  width: 100%;
+  background-color: $gray-lighter;
+  @include clear;
+  overflow: hidden;
+}
+
+.feature__pair--image,
+.feature__pair--content {
+  @include mq(64em) {
+    width: 50%;
+    display: inline-block;
+  }
+
+}
+
+.feature__pair--image {
+  img {
+    width: 100%;
+  }
+  @include mq(64em) {
+    float: right;
+  }
+}
+
+.feature__pair--content {
+  padding: 2rem;
+  @include mq(64em) {
+    padding: 1rem;
+  }
+  @include mq(80em) {
+    padding: 2rem;
+  }
+}
+
+.feature__pair--title {
+  @include font-size(25);
+  margin-bottom: 1rem;
+}
+
+.feature__pair--text {
+  line-height: 1.7;
+}

@@ -1,0 +1,79 @@
+.share__nav-bar {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-bottom: .1rem solid $gray;
+  ul {
+    display: table;
+    margin: 0 auto;
+  }
+  li {
+    display: table-cell;
+    padding: 1rem 0;
+    border-bottom: .2rem solid transparent;
+
+  }
+
+}
+
+.share__item {
+  padding-bottom: 1.45rem;
+  @include mq(64em) {
+    margin: 0 10rem;
+  }
+  &:hover,
+  &.active {
+    border-bottom: .2rem solid $maroon;
+  }
+}
+
+.share__item--icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  color: $maroon;
+  margin: 0 1rem;
+
+  .svgstore {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+
+.referral {
+  display: none !important;
+}
+
+
+.juicer-feed {
+  padding-top: 2rem !important;
+  .feed-item {
+    border-width: .1rem !important;
+    border-radius: 0;
+    border-color: none;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.40);
+  }
+  .j-stacker {
+    width: 95% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .j-paginate {
+    padding: .5rem 1.5rem;
+    color: $maroon !important;
+    background: $white !important;
+    border-radius: .3rem !important;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    font-family: $sans-serif;
+    font-size: 17px !important;
+    border: .1rem solid $maroon !important;
+    &:hover {
+      background: $maroon !important;
+      color: $white !important;
+    }
+  }
+}

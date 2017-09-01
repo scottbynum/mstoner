@@ -1,0 +1,139 @@
+.wrap {
+  @include clear;
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include mq(48em) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  @include mq(90em) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+.wrap--wide {
+  max-width: 96rem;
+}
+
+.wrap--narrow {
+  max-width: 70rem;
+}
+
+.wrap--slim {
+  max-width: 58rem;
+}
+
+.wrap--relative {
+  position: relative;
+}
+
+.main,
+.sidebar {
+  @include spacing(1);
+  @include mq(64em) {
+    @include spacing(4);
+  }
+}
+
+.main {
+  @include spacing(2);
+  @include mq(64em) {
+    @include spacing(4);
+    width: calc(100% - 22rem);
+    float: right;
+  }
+
+  @include mq(90em) {
+    width: calc(100% - 24rem);
+  }
+}
+
+.main--center {
+  @include mq(64em) {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+}
+
+.main--full-width {
+  @include spacing(2);
+  @include mq(64em) {
+    @include spacing(4);
+  }
+}
+
+.sidebar {
+  @include mq(64em) {
+    width: 18rem;
+    float: left;
+    clear: left;
+  }
+}
+
+.main + .sidebar + .main {
+  @include mq(64em) {
+    margin-top: 0;
+  }
+}
+
+.sidebar--secondary {
+  margin-top: -2rem;
+}
+
+
+.section {
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.section--tall {
+  margin: 5rem 0;
+}
+
+
+.section--tall-top {
+  margin-top: 5rem;
+}
+
+.section--tall-bottom {
+  margin-bottom: 5rem;
+}
+
+.section--gray-lighter {
+  background-color: $gray-lighter;
+}
+
+.heading {
+  @include spacing(2);
+  margin-bottom: 0;
+  @include mq(64em) {
+    @include spacing(4);
+    margin-bottom: 0;
+  }
+  .h1,
+  h1 {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+}
+
+.main--left {
+  @include mq(64em) {
+    float: left;
+  }
+}
+
+.sidebar--right {
+  @include mq(64em) {
+    float: right;
+    clear: right;
+  }
+}
+

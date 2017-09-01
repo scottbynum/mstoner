@@ -1,0 +1,7 @@
+.top__nav {
+  @include mq(64em) {
+    background: $gray-lighter;
+    position: absolute;
+    top: 0;
+  }
+}

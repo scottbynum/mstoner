@@ -1,0 +1,72 @@
+.mega {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background: $gray-lighter;
+  color: $black;
+  visibility: hidden;
+  z-index: -1;
+
+  .nav__item--active & {
+    visibility: visible;
+  }
+}
+
+.mega__menu {
+  width: calc(55% - 0.625rem);
+  float: left;
+}
+
+.mega__content {
+  width: calc(45% - 0.625rem);
+  float: right;
+}
+
+.mega__heading {
+  margin-bottom: 1.25rem;
+  color: $blue;
+  font-family: $sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.mega__heading--small {
+  padding-top: 0.875rem;
+  padding-bottom: 0.375rem;
+  font-size: 1.25rem;
+}
+
+.mega__nav {
+  width: 33.333%;
+  margin: 0;
+  padding: 0 1.25rem 0 0;
+  float: left;
+  font-family: $sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  list-style: none;
+}
+
+.mega__nav__item {
+  margin-bottom: 1.25rem;
+}
+
+.mega__nav__link {
+  .mega__nav__item--current > & {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.mega__close {
+  position: relative;
+  cursor: pointer;
+}
+.mega__close--icon {
+  position: absolute;
+  width: 2rem;
+  right: 0;
+}

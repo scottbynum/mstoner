@@ -1,0 +1,148 @@
+.footer {
+  background: $gray;
+  font-family: $sans-serif;
+  color: $white;
+  .wrap {
+    position: relative;
+  }
+  a {
+    color: $white;
+  }
+}
+
+.footer__nav {
+
+  ul {
+    @include clean;
+    list-style: none;
+    float: left;
+  }
+  li {
+    display: block;
+  }
+  li:not(:last-child) {
+    padding-right: 1.5rem;
+  }
+  a {
+    @include underline($color: rgba($white, .3));
+    @include font-size(14);
+  }
+}
+
+.footer__wrap {
+
+  @include mq(64em) {
+    padding: 4rem 0 2rem;
+  }
+  .wrap {
+    position: relative;
+  }
+}
+
+.footer__social {
+  background: $maroon;
+  padding: 0 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: 1rem;
+  @include mq(48em) {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 0 1.5rem;
+  }
+  @include mq(64em) {
+    padding: 0 1rem;
+    margin: 0;
+    position: absolute;
+    top: -6rem;
+    right: 2rem;
+  }
+  ul {
+    @include clean;
+  }
+  li {
+    display: inline-block;
+    padding: 1rem 0.3rem;
+    margin-bottom: 0;
+    @include mq(48em) {
+      padding: 1rem 0.5rem;
+    }
+  }
+}
+
+.footer__social--icon {
+  display: inline-block;
+  width: 1.5rem;
+  vertical-align: middle;
+  color: $white;
+  &:hover {
+    color: rgba($white, .85);
+  }
+}
+
+.footer__contact {
+  color: $white;
+  line-height: 2;
+  @include font-size(14);
+  @include mq(80em) {
+    margin-left: 3rem;
+  }
+}
+
+.copyright {
+  @include font-size(12);
+  @include mq(80em) {
+    margin-top: 2.5rem;
+    margin-left: 3rem;
+  }
+
+}
+
+
+.pre-footer {
+  background-color: $gray;
+  color: $white;
+  padding: 8rem 0;
+  text-align: center;
+  font-weight: 300;
+  a {
+    color: $white;
+    @include underline($color: rgba($white, .3));
+    &:hover {
+      @include underline;
+      text-decoration: none;
+    }
+  }
+}
+
+.pre-footer__col {
+  padding: 2.5rem 1rem;
+  @include mq(48em) {
+    padding: 0 2.5rem;
+  }
+}
+
+.pre-footer__location {
+  @extend .h5;
+  text-transform: uppercase;
+}
+
+.pre-footer__text {
+  line-height: 1.86;
+  font-family: $serif;
+  margin-bottom: 0;
+}
+
+.pre-footer__icon {
+  width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pre-footer--alt {
+    background-color: $gray-lighter;
+  padding: 8rem 0;
+  text-align: center;
+  font-weight: 300;
+
+}

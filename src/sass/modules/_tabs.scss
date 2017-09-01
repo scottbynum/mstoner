@@ -1,0 +1,56 @@
+.tabs {
+  font-family: $sans-serif;
+  .nav-tabs {
+    text-align: center;
+    @include mq($max: 48em) {
+      border-bottom: 0;
+    }
+  }
+  .nav-tabs > li {
+    margin-bottom: 0;
+    float: none;
+    display: inline-block;
+  }
+  .nav-tabs > li.active > a {
+    border: 0;
+    background: $maroon;
+    color: $white;
+    @include mq(48em) {
+      background: $white;
+      color: $maroon;
+      border-radius: 0;
+      border-bottom: .3rem solid $maroon;
+    }
+  }
+  .nav-tabs > li > a {
+    color: $maroon;
+    border-color: $maroon;
+    border-radius: 4px;
+    @include mq(48em) {
+      border: 0;
+      border-bottom: .3rem solid transparent;
+    }
+    &:hover {
+      @include mq(48em) {
+        background: $white;
+        color: $maroon;
+        border-radius: 0;
+        border-bottom: .3rem solid $maroon;
+      }
+    }
+  }
+}
+
+
+.hero__tabs__wrap {
+  .tab-content>.tab-pane.active {
+    display: block;
+    @include show;
+  }
+
+  .tab-content>.tab-pane {
+    display: block;
+    @include hide;
+  }
+}
+

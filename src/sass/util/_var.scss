@@ -1,0 +1,99 @@
+// colors
+$maroon: #850928;
+$white: #fff;
+$red: #a8002a;
+$red-dark: #6A0025;
+$blue: #032c4c;
+$blue-light: #3b74a2;
+$blue-lighter: #3e77a7;
+$yellow: #eba836;
+$orange: #ca4a24;
+$black: #000;
+$gray: #413f46;
+$gray-dark: #333;
+$gray-light: #dedede;
+$gray-lighter: #f6f6f6;
+
+$gray-opacity: rgba($gray, 0.5);
+
+$red-gradient: linear-gradient(#b4002e, $maroon);
+$orange-gradient: linear-gradient($orange, #b2300a);
+$orange-alt-gradient: linear-gradient($orange, transparent);
+$blue-gradient: linear-gradient(#075783, $blue);
+$black-gradient: linear-gradient(transparent, rgba($black, 0.6));
+
+
+// fonts
+$serif: 'adelle', serif;
+$sans-serif: 'Gotham A', 'Gotham B', sans-serif;
+
+$light: 300;
+$normal: 500;
+$bold: 700;
+
+// transitions
+$transition-speed: 300ms;
+$transition-easing: ease;
+$transition: $transition-speed $transition-easing;
+
+// misc
+$box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.40);
+$border-radius: 4px;
+
+
+// Bootstrap variable overrides
+$link-color: $blue;
+$link-hover-decoration: none;
+
+$font-family-sans-serif: $sans-serif;
+$font-family-serif: $serif;
+
+$font-size-base: 17px;
+
+
+$btn-default-bg: transparent;
+$btn-default-border: $maroon;
+$btn-default-color: $maroon;
+
+$btn-primary-bg: $maroon;
+$btn-primary-color: $white;
+$btn-primary-border: $white;
+
+$panel-default-border: $maroon;
+$panel-default-heading-bg: transparent;
+
+$nav-link-hover-bg: transparent;
+
+$nav-tabs-border-color: $gray;
+$nav-tabs-active-link-hover-color: $maroon;
+$nav-tabs-active-link-hover-border-color: transparent;
+$nav-tabs-active-link-hover-bg: transparent;
+$nav-tabs-link-hover-bg: transparent;
+
+$navbar-default-border: 0;
+$navbar-border-radius: 0;
+$navbar-default-bg: $blue;
+$navbar-default-link-color: $white;
+$navbar-default-link-hover-color: $white;
+$navbar-default-link-active-bg: transparent;
+$navbar-default-link-active-color: $white;
+
+$pagination-color: $maroon;
+$pagination-border: $white;
+$pagination-active-border: $white;
+$pagination-active-bg: $gray-lighter;
+$pagination-active-color: $gray;
+$pagination-bg: transparent;
+
+
+@keyframes zoomin {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

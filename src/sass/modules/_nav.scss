@@ -1,0 +1,395 @@
+.menu-active  {
+  overflow: auto;
+}
+
+
+.nav__wrap {
+  background: $maroon;
+  padding: 2rem 0;
+  @include hide;
+  visibility: hidden;
+  @include mq(64em) {
+    @include show;
+    visibility: visible;
+    height: 3rem;
+    line-height: 2rem;
+    padding: 0;
+  }
+  .menu-active & {
+    @include show;
+    visibility: visible;
+    top: 3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    overflow: scroll;
+    height: 90%;
+  }
+}
+
+.nav__list {
+  @include clear;
+  @include clean;
+  list-style: none;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include mq(64em) {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  li {
+    @include clear;
+    margin-bottom: 0.2rem;
+    @include mq(64em) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.subnav__list {
+  padding-left: 1rem;
+  line-height: 1;
+  @include hide;
+  visibility: hidden;
+  .expanded & {
+    @include show;
+    visibility: visible;
+  }
+}
+
+.nav__list
+.nav__link,
+.subnav__link {
+  color: $white;
+  font-family: $sans-serif;
+  display: block;
+  padding: 0.5rem 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:hover,
+  &:focus {
+    color: $white;
+    @include mq(64em) {
+      background: $red-dark;
+    }
+  }
+  &:focus {
+    outline: 0.125rem solid rgba(77, 144, 254, 1);
+    outline-offset: 0;
+  }
+  @include mq(64em) {
+    padding: 0.5rem;
+  }
+  @include mq(80em) {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.subnav__link {
+  @include mq(64em) {
+    color: $white;
+    &:hover {
+          color: rgba($white, .85);
+    }
+  }
+}
+
+.nav__list--cta {
+  @include mq(65em) {
+    float: right;
+  }
+}
+
+.nav__link {
+  @include font-size(21);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.active {
+    color: $white;
+    @include mq(64em) {
+      background: $red-dark;
+    }
+
+  }
+  @include mq(64em) {
+    @include font-size(18);
+  }
+  @include mq(80em) {
+    @include font-size(21);
+  }
+}
+
+.nav__link--cta {
+  @include font-size(16);
+  font-family: $serif !important;
+  background-color: $red;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  @include mq(64em) {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    @include font-size(14);
+  }
+  @include mq(80em) {
+    @include font-size(16);
+  }
+}
+
+.nav__link--sub {
+  @include font-size(14);
+  @include mq(64em) {
+    color: $black;
+  }
+}
+
+.nav__toggle {
+  float: right;
+  width: 3rem;
+  height: 3rem;
+  color: $white;
+  padding: 1rem;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+  &:focus {
+    outline: 0.125rem solid rgba(77, 144, 254, 1);
+    outline-offset: 0;
+  }
+  @include mq(64em) {
+    display: none !important;
+  }
+  .svgstore--arrow {
+    margin-top: 0.5rem;
+  }
+
+  + a {
+    overflow: hidden;
+  }
+  .expanded & {
+    transform: rotate(180deg);
+  }
+}
+
+.nav__list--sub {
+  .nav__toggle {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+  }
+  @include mq(64em) {
+    display: none;
+  }
+}
+
+
+.nav__link {
+  .nav__link--active & {
+    background: $red-dark;
+    color: $white;
+  }
+}
+
+ul.subnav__list {
+  margin: 0;
+  list-style: none;
+}
+
+.subnav__list--wrap {
+  @include clear;
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include mq(64em) {
+    padding-right: 5rem;
+    padding-left: 5em;
+  }
+}
+
+div.subnav__list {
+  padding-left: 0;
+  ul {
+    @include clean;
+    list-style: none;
+  }
+  @include mq(64em) {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: $red-dark;
+    color: $white;
+    visibility: hidden;
+    z-index: 2;
+    padding: 2rem 0;
+    .nav__link--active & {
+      visibility: visible;
+    }
+    li {
+      width: calc(50% - 2rem);
+      padding: 1rem;
+      @include mq(80rem) {
+        width: calc(35% - 2rem);
+      }
+    }
+    .subnav__link {
+      display: inline-block;
+      line-height: 1.6;
+    }
+    .program__form__item {
+      width: 100%;
+      display: block;
+      padding: 0.5rem;
+    }
+    .search__input {
+      border: .1rem solid $gray;
+    }
+
+  }
+}
+
+// Listing page subnav menu
+
+.navbar {
+  min-height: 0;
+  margin-bottom: 0;
+  .container-fluid {
+    @include mq(64em) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+  .navbar-toggle {
+    border-color: transparent;
+    margin-right: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: 0;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+.navbar-toggle--icon {
+  display: inline-block;
+  width: 2.5rem;
+  margin-top: 0.7rem;
+  padding: 0.5rem;
+  color: $white;
+  transform: rotate(180deg);
+  margin-right: 0.5rem;
+  .collapsed & {
+    transform: rotate(0);
+  }
+}
+
+.navbar-brand {
+  @include show;
+  float: none;
+  display: block;
+  @include mq(64.1em) {
+    @include hide;
+  }
+}
+
+
+
+.navbar-nav {
+  @include mq(64em) {
+    float: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    padding-top: .4rem;
+    border-bottom: .4rem solid transparent;
+    margin-bottom: -0.05rem;
+    &:hover,
+    &.active {
+      background-color: darken($blue, 5%);
+      @include mq(48em) {
+        background-color: transparent;
+        border-bottom: .4rem solid $yellow;
+      }
+    }
+  }
+  .navbar-nav__link {
+    padding: 0.5rem;
+    text-align: center;
+    &:hover {
+      @include mq(48em) {
+        background-color: none;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    @include mq(48em) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+
+
+  .navbar-nav__divider {
+    @include hide;
+    @include mq(64em) {
+      @include show;
+      width: .05rem;
+      background-color: $white;
+      &:hover {
+        border-bottom: 0;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+@include mq($max: 64em) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+}
